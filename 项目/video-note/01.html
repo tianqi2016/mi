@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.equal-to{
+			color: green;
+		}
+		.greater-than{
+			color: blue;
+		}
+		.less-than{
+			color: red;
+		}
+		.active{
+			background-color: #1b6d85;
+		}
+	</style>
+	<script src="../js/jquery.js" type="text/javascript">
+
+	</script>
+	<body>
+		<p>编写一个json文件,包含多条员工数据含自动编号，姓名，性别（0,1,2），收入，居住地址（含省、市、详细地址）
+使用ajax获取数据，在表格中显示数据。
+第一列使用radio，选中时，被选中的行高亮显示
+性别显示男，女，未知
+收入高于平均工资蓝色显示，低于平均工资红色显示，等于平均工资绿色显示
+居住地址把省、市和详细地址连接一起显示
+在表格上方添加一个文本框，根据用户输入的内容来筛选表格的内容，根据姓名查询，输入的内容一有变化，立即筛选
+</p>
+		<div>
+			<label for="search">查询：</label>
+			<input id="search" type="text">
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>收入</th>
+					<th>居住地址</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+			</tbody>
+		</table>
+		<script type="text/javascript">
+			employees=[];
+			function sexString(sex) {
+				if(sex==0){
+					return "男";
+				}
+				else if(sex==1){
+					return "女";
+				}else{
+					return "未知";
+				}
+				//return sex==0?"男":(sex==1?"女":"未知");
+			}
+			$.getJSON('employee.json',function(employees){
+				var html='';
+				var total =0,avg=0;
+				for(var i=0,len=employees.length;i<len;i++){
+                      total+=employees[i].income;
+				}
+				avg=total/len;
+				for(var i=0,len=employees.length;i<len;i++){
+					var className='greater-than';
+					html +='<tr >';
+					html +='<td><input name="employeeChecked" type="radio" value="1"/></td>';
+					html +='<td>'+employees[i].name+'</td>';
+					html +='<td>'+sexString(employees[i].sex)+'</td>';
+					if(employees[i].income=avg){
+						className='equal-to';
+					}else if(employees[i].income<avg){
+						className='less-than';
+					}
+					html+='<td class="'+ className +'">'+employees[i].income+'</td>';
+					html+='<td>'+employees[i].address.city+employees[i].address.detail+'</td>';
+					html+='</tr>';
+				}
+				$('tbody').html(html);
+			})
+			$('tbody').on('click','tr',function () {
+				$(this).addClass('active');
+                $(this).siblings().removeClass();
+			})
+			$('#search').on('keyup',function () {
+				var selector = '';
+				selector = ':contains('+ $(this).val() +')';
+				$('tbody tr').hide();
+				$('tbody tr').filter(selector).show();
+			});
+		</script>
+	</body>
+</html>

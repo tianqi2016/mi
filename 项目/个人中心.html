@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/个人中心.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/个人中心.js"></script>
+    <script src="js/store.js"></script>
+
+</head>
+<body style="overflow-x: hidden">
+<div class="visible-lg-block hidden-sm hidden-md hidden-xs">
+    <div class="site-ad-bar container-fluid"></div>
+    <nav class="navbar navbar-default " style="background: rgb(51,51,51);border: 0px;height: 10px">
+        <li class="container-fluid" style="height: 20px" >
+            <ul class="nav navbar-nav " id="daohang1" style="margin-top: -22px">
+                <li ><a href="" >小米商城</a></li>
+                <li><a href="">MIUI</a></li>
+                <li><a href="">米聊</a></li>
+                <li><a href="">游戏</a></li>
+                <li><a href="">多看阅读</a></li>
+                <li><a href="">云服务</a></li>
+                <li><a href="">金融</a></li>
+                <li><a href="">米币</a></li>
+                <li><a href="">小米商城手机版</a></li>
+                <li><a href="">问题反馈</a></li>
+                <li><a href="">Select Region</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" >
+                <li ><a href="" style="padding: 0px;margin-top: -5px;margin-right:10px ">登录</a></li>
+                <li><a href="" style="padding: 0px;margin-top: -5px">注册</a></li>
+                <li><a href="" style="margin-top: -20px">消息通知</a></li>
+                <li class="btn dropdown-toggle" type="button" id="gouwu"  data-toggle="dropdown" style="background: #c0c0c0;height: 50px;margin-top: -20px ">
+                    <a href="" style="margin-top: -5px;"> 购物车&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" ></span></a>
+                </li>
+
+                <ul class="dropdown-menu cart" id="x-shop"  >
+                    <li  class="dropdown-header row" >
+                        <div class="col-lg-4">
+                            <img src="img/x-mi1.png" alt=""><p style="display: inline">
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="">小米6高贴 模</a>
+
+                            <p>
+                                <a href="#" class="del">删除</a>
+                            </p>
+                            <span class="price">49</span>元一件
+                        </div>
+                        <div class="col-lg-4 total">
+                            <button class="reduce">-</button>
+                            <span>0</span>
+                            <button class="plus">+</button>
+                        </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li  class="dropdown-header row">
+                        <div class="col-lg-4">
+                            <img src="img/x-mi2.png" alt=""><p style="display: inline">
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="">小米6高贴 模</a>
+
+                            <p><a href="#" class="del">删除</a>
+                            </p>
+                            <span class="price">22</span>元一件
+                        </div>
+                        <div class="col-lg-4 total">
+                            <button class="reduce">-</button>
+                            <span>0</span>
+                            <button class="plus">+</button>
+                        </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li  class="dropdown-header row" >
+                        <div class="col-lg-4">
+                            <img src="img/x-mi3.png" alt=""><p style="display: inline">
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="">小米6手机</a>
+
+                            <p><a href="#" class="del">删除</a>
+                            </p>
+                            <span class="price">2279</span>元一件
+                        </div>
+                        <div class="col-lg-4 total">
+                            <button class="reduce">-</button>
+                            <span>0</span>
+                            <button class="plus">+</button>
+                        </div>
+                    </li>
+                    <li class="row dropdown-header">
+                        <div class="col-lg-5" style="font-size: 30px">
+                            总共：
+                            <span class="totalNum">0</span>件
+                            <p>总价 <span class="tatol-price">0</span>￥</p>
+                        </div>
+                    </li>
+                    <li >
+                        <button class="jiesuan btn-success col-lg-12" style="height: 40px;background: green;border: 0px">结算</button>
+                    </li>
+                </ul>
+            </ul>
+        </li>
+    </nav>
+    <div style="width: 100%;height: 100px;background: #FFF;position: absolute;margin-top: -20px">
+
+    </div>
+    <div class="container">
+        <div class="row" >
+            <div class="col-lg-2" >
+                <div id="img-tt">
+                    <img src="img/mi.png" alt="" id="img-mi" >
+                    <img src="img/zzy.png" alt="" id="img-zzy" >
+                </div>
+            </div>
+            <div class="col-lg-7" >
+                <nav class="navbar "  >
+                    <div class="container-fluid"  >
+                        <ul class="nav navbar-nav daohang2" style="margin-top:5px;margin-left: -120px" >
+                            <li><a href="" id="shopping">全部商品分类</a></li>
+                            <li>
+                                <a  href="#ac"  data-toggle="collapse">小米手机</a>
+                                <ul class="collapse fade" id="ac" style="position: absolute;z-index: 10">
+                                    <li><img src="img/biji.jpg" alt=""></li>
+                                    <li><img src="img/biji.jpg" alt=""></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a  href="#af"  data-toggle="collapse">红米</a>
+                                <ul class="collapse fade" id="af" style="position: absolute;z-index: 10">
+                                    <li><img src="img/biji.jpg" alt=""></li>
+                                    <li><img src="img/biji.jpg" alt=""></li>
+                                </ul>
+                            </li>
+                            <li><a href="">平板-笔记本</a></li>
+                            <li><a href="">电视</a></li>
+                            <li><a href="">盒子-影音</a></li>
+                            <li><a href="">路由器</a></li>
+                            <li><a href="">智能硬件</a></li>
+                            <li><a href="">服务</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="btn-group">
+                    <input type="text" placeholder="小米7" class="btn btn-default" style="height: 55px">
+                    <button class="btn btn-default" ><span class="glyphicon glyphicon-search" style="height: 26px;width: 40px;margin-top: 15px" ></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div  >
+    <ul style="position: absolute;top: 150px;left: 65px;z-index: 11;border: 1px red solid;width: 217px;display: none;padding-left:0px;background: #FFF " id="ul2">
+        <div id="night">
+        <li >
+            <span >手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        <li >
+            <span >手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        <li >
+            <span >手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        <li >
+            <span >手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        <li >
+            <span >手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        <li >
+            <span>手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        <li >
+            <span>手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        <li >
+            <span >手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        <li >
+            <span >手机 电话卡</span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+        </li>
+        </div>
+        <ul id="float-right" style="background:#FFF;z-index: 10">
+            <li >
+                <img src="img/x-mi1.png" alt="">
+                <p style="display: inline-block">小米1</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米1s</p>
+            </li>
+            <li >
+                <img src="img/x-mi1.png" alt="">
+                <p style="display: inline-block">小米2</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米3</p>
+            </li>
+            <li style=>
+                <img src="img/x-mi1.png" alt="">
+                <p style="display: inline-block">小米4s</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米5</p>
+            </li>
+            <li >
+                <img src="img/x-mi1.png" alt="">
+                <p style="display: inline-block">小米6</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米7</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米8</p>
+            </li>
+        </ul>
+    </ul>
+</div>
+
+
+
+
+<div class="container-fluid" style="margin-top: 20px">
+    <div class="row">
+        <div class="col-lg-3">
+            <p style="margin-left: 80px"><a href="" style="color: #757575;text-decoration: none">首页</a> <span> > </span>  <span style="color: #757575">个人中心</span></p>
+        </div>
+    </div>
+</div>
+<div class="container" >
+ <div class="row" >
+     <div class="col-lg-2" style="background: #FFF" id="left-l">
+         <p style="margin-left: 30px;font-weight: 600;margin-top: 40px;font-size: 16px;color: #333">订单中心</p>
+         <ul style="list-style: none" id="myding">
+             <li>我的订单</li>
+             <li>意外保</li>
+             <li>团购订单</li>
+             <li>评价订单</li>
+             <li>话费充值订单</li>
+             <li>以旧换新订单</li>
+         </ul>
+         <p style="margin-left: 30px;font-weight: 600;margin-top: 35px;font-size: 16px;color: #333">个人中心</p>
+         <ul id="informy">
+             <li ><a href="javascript:" id="myde" style="text-decoration: none">我的个人中心</a></li>
+             <li>消息通知</li>
+             <li>购买资格</li>
+             <li>现金账户</li>
+             <li>小米礼品卡</li>
+             <li>现金券</li>
+             <li>喜欢的商品</li>
+             <li>优惠券</li>
+             <li><a href="javascript:" id="myshouhuo" style="text-decoration: none">收货地址</a></li>
+         </ul>
+         <p style="margin-left: 30px;font-weight: 600;margin-top: 35px;font-size: 16px;color: #333">售后服务</p>
+         <ul id="myfuwu">
+             <li>服务记录</li>
+             <li>申请服务</li>
+             <li>领取快递报销</li>
+         </ul>
+         <p style="margin-left: 30px;font-weight: 600;margin-top: 35px;font-size: 16px;color: #333">售后服务</p>
+         <ul id="myself">
+             <li><a href="小米帐号.html" style="text-decoration: none">个人信息</a></li>
+             <li><a href="修改密码.html" style="text-decoration: none">修改密码</a></li>
+             <li>社区VIP认证</li>
+         </ul>
+     </div>
+     <div class="col-lg-9" id="gerenzhongxin" style="width: 950px;position: absolute;left: 275px" >
+         <div id="cent1" class="container" >
+             <div class="row">
+                 <div class="col-lg-12">
+                     <div >
+                       <div id="yidong-yi">
+                           <p style="font-size: 24px;font-weight: 400;color: #777676">12312312</p>
+                          <!-- <p style="color: #b0b0b0">下午好</p>-->
+                           <div><p class="temorr" style="color: #b0b0b0">早上好 ~</p>
+                               <p class="temorr1" style="color: #b0b0b0">下午好 ~</p>
+                               <p class="temorr2" style="color: #b0b0b0">晚上好 ~</p></div>
+                           <p><a href="#" style="color: #ff6700;text-decoration: none">修改信息</a></p>
+                       </div>
+                         <img src="img/toux.jpg" alt="" id="style-img1">
+                     </div>
+                     <div >
+                         <table id="biaoge">
+                             <tr style="display: block"><td>账户安全：&nbsp;</td><td>&nbsp;普通</td></tr>
+                             <tr style="display: block;margin-top: 10px"><td>绑定手机：&nbsp;</td><td>&nbsp;12*****12</td></tr>
+                             <tr style="display: block;margin-top: 10px"><td>绑定邮箱：&nbsp;</td><td>&nbsp;</td></tr>
+                         </table>
+                         <a href="" class="btn" id="bemail">绑定</a>
+                     </div>
+                 </div>
+             </div>
+             <fieldset style="margin-top: 40px" >
+                 <legend style="width: 800px;background: red "></legend>
+             </fieldset>
+             <div class="row" style="position: relative;left: 50px;" >
+                 <div class="col-lg-12">
+                        <div style="margin-top: 50px;position: relative;">
+                            <img src="img/icon-1.png" alt="">
+                            <p style="display: inline-block;position: absolute;left: 120px;top: 30px;font-size: 18px;color: #757575">待支付的订单：<span style="color: orangered">0</span></p>
+                            <p style="position: absolute;top: 60px;left: 120px;"><a href="" id="dai">查看待支付的订单&nbsp;&nbsp; <span class="glyphicon glyphicon-chevron-right" ></span></a></p>
+                        </div>
+                     <div style="top: 50px;position: absolute;left: 400px">
+                         <img src="img/icon-2.png" alt="">
+                         <div style="position: absolute;left: 120px;width: 140px;top: 30px">
+                             <p style="font-size: 18px;color: #757575">待支付的订单：<span style="color: orangered">0</span></p>
+                             <p ><a href="" id="dai1">查看待收获订单&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right" ></span></a></p>
+                         </div>
+                     </div>
+                     <div style="margin-top: 50px;position: relative;">
+                         <img src="img/icon-3.png" alt="">
+                         <p style="display: inline-block;position: absolute;left: 120px;top: 30px;font-size: 18px;color: #757575">待支付的订单：<span style="color: orangered">0</span></p>
+                         <p style="position: absolute;top: 60px;left: 120px;"><a href="" id="dai2">查看待评价的商品&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right" ></span></a></p>
+                     </div>
+                     <div style="position: absolute;left: 400px;top: 198px;">
+                         <img src="img/icon-4.png" alt="" style="">
+                       <div style="width: 250px;position: absolute;left:120px;top: 30px;">
+                           <p style="font-size: 18px;color: #757575">待支付的订单：<span style="color: orangered">0</span></p>
+                           <p ><a href="" id="dai3">查看喜欢的商品&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right" ></span></a></p>
+                       </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="motai" style="display: none">
+        <div class="col-lg-9" id="SHDZ" style="height: 1060px;">
+             <div class="row">
+                 <div class="col-lg-12" style="width: 800px">
+                    <h2>收货地址</h2>
+                     <div class="add">
+                         <div class="shouhuodizhi text-center" style="float: left" id="text-center">
+                             <a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></a>
+                             <a href="#" data-toggle="modal" data-target="#myModal"><p>添加新地址</p></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="modal fade" tabindex="-1" role="dialog" id="myModal" style="display: none">
+             <div class="modal-dialog" role="document">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h3>添加收货地址</h3>
+                     </div>
+                     <div class="modal-body">
+                         <form class="form-horizontal">
+                             <div class="form-group">
+                                 <label for="inputName" class="col-sm-4 control-label">姓名：</label>
+                                 <div class="col-sm-8">
+                                     <input type="text" class="form-control" id="inputName" >
+                                 </div>
+                             </div>
+                             <div class="form-group">
+                                 <label for="inputPhone" class="col-sm-4 control-label">手机号码：</label>
+                                 <div class="col-sm-8">
+                                     <input type="text" class="form-control" id="inputPhone" >
+                                 </div>
+                             </div>
+                             <div class="form-group">
+                                 <label class="col-sm-4 control-label">选择省份 / 城市 / 地区</label>
+                                 <div class="col-sm-8">
+                                     <select id="privace" style="width: 120px">
+                                         <option >---请选择省份----</option>
+                                     </select>
+                                     <select  id="city" style="width: 120px">
+                                         <option >---请选择城市----</option>
+                                     </select>
+                                     <select  id="xian" style="width: 120px">
+                                         <option >---请选择县城---</option>
+                                     </select>
+                                 </div>
+                                 <div></div>
+                             </div>
+                             <div class="form-group">
+                                 <label for="inputAddress" class="col-sm-4 control-label">详细地址</label>
+                                 <div class="col-sm-8">
+                                     <input type="text" class="form-control" id="inputAddress" >
+                                 </div>
+                             </div>
+                             <div class="form-group">
+                                 <label for="inputZipcode" class="col-sm-4 control-label">邮编</label>
+                                 <div class="col-sm-8">
+                                     <input type="text" class="form-control" id="inputZipcode">
+                                 </div>
+                             </div>
+                         </form>
+                     </div>
+                     <div class="modal-footer">
+                         <div class="col-sm-8">
+                             <button type="button" class="btn btn-primary" id="save" >保存</button>
+                         </div>
+                         <div class="col-sm-1 col-sm-offset-1">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                         </div>
+                     </div>
+             </div>
+         </div>
+    </div>
+</div>
+    <div class="container" style="margin-top: 1200px;margin-bottom: 20px;">
+        <div class="row">
+            <div class="nav nav-tabs nav-justified " style="position: absolute;top: 1370px;" >
+                <li>
+                    <a class="btn-default" href="#"><i class="glyphicon glyphicon-file"></i>&nbsp;预约维修服务</a>
+                </li>
+                <li><a class="btn-default" href="#"><i class="glyphicon glyphicon-file"></i>&nbsp;预约维修服务</a></li>
+                <li><a class="btn-default" href="#"><i class="glyphicon glyphicon-file"></i>&nbsp;预约维修服务</a></li>
+                <li ><a class="btn-default" href="#"><i class="glyphicon glyphicon-file"></i>&nbsp;预约维修服务</a></li>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px">
+            <div class="col-lg-10">
+                <div class="row" id="helpCent">
+                    <div class="col-lg-2">
+                        帮助中心
+                        <div class="row">
+                            <div class="col-lg-12" >
+                                <li><a href="" class="btn-default">帮助中心</a></li>
+                                <li><a href="" class="btn-default">帮助中心</a></li>
+                                <li><a href="" class="btn-default">帮助中心</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        服务支持
+                        <div class="row">
+                            <div class="col-lg-12"  >
+                                <li><a href="" class="btn-default">服务支持</a></li>
+                                <li><a href="" class="btn-default">服务支持</a></li>
+                                <li><a href="" class="btn-default">服务支持</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        企业管理
+                        <div class="row">
+                            <div class="col-lg-12"  >
+                                <li><a href="" class="btn-default">企业管理</a></li>
+                                <li><a href="" class="btn-default">企业管理</a></li>
+                                <li><a href="" class="btn-default">企业管理</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        法律法规
+                        <div class="row">
+                            <div class="col-lg-12" >
+                                <li><a href="" class="btn-default">法律法规</a></li>
+                                <li><a href="" class="btn-default">法律法规</a></li>
+                                <li><a href="" class="btn-default">法律法规</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        敬老院
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <li><a href="" class="btn-default">敬老院</a></li>
+                                <li><a href="" class="btn-default">敬老院</a></li>
+                                <li><a href="" class="btn-default">敬老院</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        福利中心
+                        <div class="row">
+                            <div class="col-lg-12" >
+                                <li><a href="" class="btn-default">福利中心</a></li>
+                                <li><a href="" class="btn-default">福利中心</a></li>
+                                <li><a href="" class="btn-default">福利中心</a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-2">
+                <p style="color: orangered;font-size: 20px;margin-left: 10px;margin-bottom: 0px">400-111-555</p>
+                <p>周一至周日 8:00-18:00 <br><small style="margin-left: 20px">（仅收市话费）</small></p>
+
+                <div ><a href="" class="btn btn-default" id="hot"><span class="glyphicon glyphicon-apple">24小时客服在线</span></a></div>
+            </div>
+        </div>
+    </div>
+    <div style="background:rgb(228,228,228);margin-bottom: 20px;height: 140px" >
+        <div class="container" style="padding-top: 40px">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-lg-1" style="margin:0px;padding: 0px">
+                            <img src="img/mibotton.png" alt="" class="pull-right" >
+                        </div>
+                        <div class="col-lg-11" style="margin-left:-10px" >
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <ul class="nav navbar-nav bot-bot navbar-right" >
+                                        <li><a  href="">小米商城 <span>|</span> </a></li>
+                                        <li><a href="">MIUI <span>|</span> </a></li>
+                                        <li><a href="">米聊 <span>|</span> </a></li>
+                                        <li><a href="">游戏 <span>|</span> </a></li>
+                                        <li><a href="">多看阅读 <span>|</span> </a></li>
+                                        <li><a href="">云服务 <span>|</span> </a></li>
+                                        <li><a href="">金融 <span>|</span> </a></li>
+                                        <li><a href="">米币 <span>|</span> </a></li>
+                                        <li><a href="">小米商城手机版 <span>|</span> </a></li>
+                                        <li><a href="">问题反馈<span>|</span> </a></li>
+                                        <li><a href="">Select Region</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12" style="margin-left: -35px">
+                                    <ul class="nav navbar-nav bot-cet navbar-right" >
+                                        <li><a  href="">&copy;mi.com&nbsp;</a></li>
+                                        <li>京ICP证110507号</li>
+                                        <li><a href="">京ICP备10003423号</a></li>
+                                        <li><a href="">京公网10320309034号  </a></li>
+                                        <li><a href="">京网文9803247238号  </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-lg-12">
+                                    <p id="weihe" >违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 " id="four-img">
+                    <li><img src="img/yinsi.png" alt=""></li>
+                    <li><img src="img/yinsi.png" alt=""></li>
+                    <li><img src="img/yinsi.png" alt=""></li>
+                    <li><img src="img/yinsi.png" alt=""></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fashao">
+</div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+.tvhead {
+  background-color: white;
+  width: 1170px;
+  height: 80px;
+}
+
+.tv li {
+  list-style: none;
+  display: inline;
+  font-size: 16px;
+  margin-right: 36px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.headimg {
+  width: 1170px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.box {
+  width: 1170px;
+}
+
+.box img {
+  width: 575px;
+}
+
+.box p {
+  color: gray;
+}
+
+.left {
+  margin-top: 20px;
+  float: left;
+  width: 570px;
+  margin-right: 25px;
+}
+
+.right {
+  margin-top: 20px;
+  float: left;
+}
+
+.article {
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: white;
+}
+
+#btn1, #btn3, #btn5 {
+  border: 1px solid #FF5500;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#btn2, #btn4, #btn6 {
+  border: 1px solid #FF5500;
+  margin-top: -90px;
+  margin-right: 20px;
+}
+
+.yanse {
+  background-color: #FF5500;
+}
+
+#btn4:hover, #btn3:hover, #btn5:hover, #btn6:hover, #btn1:hover, #btn2:hover {
+  background-color: #FF5500;
+}
+
+.phone-section {
+  background-image: url('../img/4k4.jpg');
+  height: 600px;
+  width: 1226px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.opc {
+  position: absolute;
+  bottom: 0;
+  top: 440px;
+  width: 100%;
+  opacity: 0.6;
+  background-color: #0f0f0f;
+  color: white;
+}
+
+.opc dl {
+  margin-left: 20px;
+  margin-top: 40px;
+  float: left;
+}
+
+.opc dt {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.opc dd {
+  font-size: 16px;
+}
+
+.opc .rightyou {
+  position: absolute;
+  right: 50px;
+  margin-top: 40px;
+  background-color: transparent;
+
+}
+
+.btn {
+  background-color: transparent;
+
+}
+
+.rightyou .btn {
+  width: 125px;
+}
+
+.rightyou a {
+  border-radius: 0;
+  border: 1px solid #f56600;
+  color: #f56600;
+}
+
+.rightyou a:hover {
+  color: white;
+}
+
+.daohang2 li a{
+  padding: 0px;
+  font-size: 18px;
+  color: black;
+}
+#daohan li a:hover{
+  color: #FFF;
+}
+#denl li a:hover{
+  color: #FFF;
+}
+#four-img li img{
+  height: 35px;
+  width: 80px;
+}
+#four-img li{
+  float: right;
+  list-style: none;
+  margin: 0px 12px;
+}
+#weihe{
+  color: rgb(140,140,140);
+  font-size: 12px;
+}
+.bot-cet li{
+  margin: 0px;
+  padding: 0px;
+}
+.bot-cet li a{
+  margin: 0px;
+  padding: 0px;
+  color: rgb(140,140,140);
+}
+.bot-cet li a:hover{
+  color: orangered;
+}
+.bot-bot li{
+  margin: 0px;
+  padding: 0px;
+}
+.bot-bot li a{
+  margin: 0px;
+  padding: 0px;
+  color: #757575;
+}
+.bot-bot li a:hover{
+  color: orangered;
+}
+#hot:hover{
+  color: #FFF;
+  border: 1px red solid;
+  background-color: orangered;
+}
+#helpCent .col-lg-12{
+  padding-top:12px ;
+}
+#helpCent li{
+  list-style: none;
+  margin: 9px 0px;
+}
+#helpCent li a{
+  color: grey;
+  text-decoration: none;
+}
+#helpCent li a:hover{
+  color: orangered;
+}

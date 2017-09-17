@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        textarea {
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <h2>简单的web存储留言板</h2>
+    <textarea id="t1"></textarea>
+    <br />
+    <input type="button" class="button" onclick="addInfo()" value="留言" />
+    <input type="button" class="button" onclick="cleanInfo()" value="清除留言" />
+    <br />
+    <hr />
+    <div id="show" readonly="readonly" style="height: 200px;width: 200px;border: 1px red solid"></div>
+</div>
+
+<script type="text/javascript">
+    //使用HTML5 Web存储的localStorage方式进行编写一个Web页面。
+    //功能是一个简易的Web留言板。留言板信息可以永久保存。并能清楚留言板内容。参考页面如下图：
+
+    function upInfo() {
+        var lStorage = localStorage;
+        var show = document.getElementById("show");
+        if (localStorage.a) {
+            show.value = localStorage.a;
+        }
+        else {
+            show.value = '';
+        }
+    }
+    function addInfo() {
+        var info = document.getElementById("t1");
+        var lStorage = localStorage;
+        if (lStorage.a) {
+            var date = new Date();
+            lStorage.a += t1.value +  "\n";
+        }
+        else {
+            var date = new Date();
+            lStorage.a = t1.value  +  "\n";
+        }
+        upInfo();
+
+    }
+    function cleanInfo() {
+      localStorage.removeItem("a");
+        upInfo();
+    }
+    upInfo();
+
+
+</script>
+
+</body>
+</html>

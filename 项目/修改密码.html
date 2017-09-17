@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+<form action="">
+   <p style="text-align: center">
+<label>新密码：</label>
+<input type="password" id="text3" >
+   </p>
+
+<p style="margin-left: 538px">
+    <label for="">确认密码：</label>
+    <input type="password" id="text4">
+</p>
+
+
+<input type="button" onclick="geng()" value="更改" style="margin-left: 650px">
+</form>
+<script>
+sessionStorage
+  /*  $('body').click(function () {
+        if($('#text').val()==localStorage.getItem('log')){
+            alert('帐号存在')
+
+        }else{
+            alert("账号不存在")
+        }
+    })*/
+    function geng() {
+
+      if($('#text3').val()==$('#text4').val()){
+          var arr=[];
+          var user={'loginName':localStorage.getItem('log'),'loginPsd':$("#text3").val()};
+          arr.push(user);
+          localStorage.user=JSON.stringify(arr);
+            alert('修改成功');
+          window.location.replace('修改密码2.html')
+      }else{
+          alert('修改失败');
+      }
+    }
+
+</script>
+</body>
+</html>

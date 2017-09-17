@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+<style>
+    .col-lg-8{
+       border: 1px red solid;
+        height: 60px;
+    }
+    #x-shop{
+        width: 361px;
+
+        position: absolute;
+        left: -240px;
+    }
+</style>
+<body>
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-4 col-lg-offset-4">
+             <div class="btn-group btn-group-justified">
+                 <div class="btn btn-primary">商品
+
+                 </div>
+                 <div class="btn btn-primary">我的订单
+
+                 </div>
+                 <div class="btn btn-primary dropdown btn-group" id="shop">
+
+                     <li class="btn dropdown-toggle" type="button" id="gouwu"  data-toggle="dropdown" >
+                        购物车&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down"></span>
+                     </li>
+                     <ul class="dropdown-menu cart" id="x-shop"  >
+                       <li  class="dropdown-header row" >
+                           <div class="col-lg-4">
+                               <img src="img/x-mi1.png" alt=""><p style="display: inline">
+                           </div>
+                           <div class="col-lg-4">
+                               <a href="">小米6高贴 模</a>
+                               </p>
+                               <p>
+                                   <a href="#" class="del">删除</a>
+                               </p>
+                               <span class="price">49</span>元一件
+                           </div>
+                           <div class="col-lg-4 total">
+                               <button class="reduce">-</button>
+                               <span>0</span>
+                               <button class="plus">+</button>
+                           </div>
+                       </li>
+                         <li  class="dropdown-header row">
+                             <div class="col-lg-4">
+                                 <img src="img/x-mi2.png" alt=""><p style="display: inline">
+                             </div>
+                             <div class="col-lg-4">
+                                 <a href="">小米6高贴 模</a>
+                                 </p>
+                                 <p><a href="#" class="del">删除</a>
+                                 </p>
+                                 <span class="price">22</span>元一件
+                             </div>
+                             <div class="col-lg-4 total">
+                                 <button class="reduce">-</button>
+                                 <span>0</span>
+                                 <button class="plus">+</button>
+                             </div>
+                         </li>
+                         <li  class="dropdown-header row" >
+                             <div class="col-lg-4">
+                                 <img src="img/x-mi3.png" alt=""><p style="display: inline">
+                             </div>
+                             <div class="col-lg-4">
+                                 <a href="">小米6手机</a>
+                                 </p>
+                                 <p><a href="#" class="del">删除</a>
+                                 </p>
+                                <span class="price">2279</span>元一件
+                             </div>
+                             <div class="col-lg-4 total">
+                                 <button class="reduce">-</button>
+                                 <span>0</span>
+                                 <button class="plus">+</button>
+                             </div>
+                         </li>
+                         <li class="row dropdown-header">
+                             <div class="col-lg-5" style="font-size: 30px">
+                                 总共：
+                               <span class="totalNum">0</span>件
+                                 <p>总价 <span class="tatol-price">0</span>￥</p>
+                                 <button class="jiesuan btn-success">结算</button>
+                             </div>
+                         </li>
+
+                     </ul>
+
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!--<img src="img/11.png" class="imgt" style="display: none;margin-left:150px; " alt="">
+ <img src="img/11.png" class="imgt" style="display: none;position: absolute;left: 500px; " alt="">
+ <img src="img/11.png" class="imgt" style="display: none;position: absolute;left: 500px;top:48px " alt="">-->
+ <img src="img/gou.jpg" class="imgt" style="display: none;position: absolute;left: 850px;top:48px " alt="">
+ <img src="img/qq.gif" class="imgt" style="display: none;position: absolute;left: 850px;top:48px" alt="">
+ <script>
+     var $shop=$('#shop');
+     var timer=null;
+     $shop.mouseover(function (){
+         $('#x-shop').show();
+     })
+     clearTimeout();
+     $('#x-shop').mouseleave(function (){
+         timer=setTimeout(function () {
+             $('#x-shop').hide();
+         },500);
+     })
+
+     $(".plus").click(function () {
+         var tatol=$(this).siblings('span');
+         tatol.text(parseInt(tatol.text())+1);
+
+         var totalNum = parseInt($(".totalNum").text());
+         totalNum++;
+         $('.totalNum').text(totalNum);
+
+        var goodprice=parseInt($(this).parent().parent().find('.price').text())
+         $('.tatol-price').text(parseInt($('.tatol-price').text())+goodprice);
+     })
+
+     $(".reduce").click(function () {
+         var total=$(this).siblings('span');
+         if(total.text()>0){
+             total.text(parseInt(total.text())-1);
+
+             var totalNum=parseInt($('.totalNum').text());
+             totalNum--;
+             $('.totalNum').text(totalNum);
+
+             var goodprice=parseInt($(this).parent().parent().find('.price').text())
+             $('.tatol-price').text(parseInt($('.tatol-price').text())-goodprice);
+         }else {
+             total.text('0');
+         }
+     })
+     $('#x-shop').on('click','a',function () {
+         $(this).parent().parent().parent().remove();
+     })
+     $('.jiesuan').click(function () {
+          if($('.tatol-price').text()>3000){
+              alert('您买不起！');
+              $('.imgt').css('display','block');
+          }else{
+              alert('先充八万');
+          }
+     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /*$.getJSON('employee.json',function(employees){
+         console.log(employees);
+         var html='';
+      /!*   for(var i=0,len=employees.length;i<len;i++){
+             html+='<li class="dropdown-header" style="display: block">';
+             html+='<img src="' + employees[i].img + '" alt="">';
+             html+='<p style="display: inline">';
+             html+='<a href="">'+employees[i].ap+'</a>';
+             html+='</p>';
+             html+='<p>';
+             html+='<a href="#" >删除</a>'
+             html+='</p>'
+             html+='</li>';
+         }*!/
+         $('#x-shop').html(html);
+         var $div =$("<div class='btn del' id='xx-shop' style='color: black'>清空购物车</div>");
+         $('#gouwu').mouseover(function (){
+             $('#x-shop').append($div);
+         })
+         $('#x-shop').on('click','a',function () {
+             $(this).parent().parent().remove();
+         })
+         $('#x-shop').on('click','div',function () {
+             $(this).siblings().remove();
+         })
+     })*/
+
+ </script>
+</body>
+</html>

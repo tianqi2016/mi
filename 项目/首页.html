@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="shortcut icon"  href="img/milo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/首页.js"></script>
+    <link rel="stylesheet" href="css/首页.css">
+</head>
+<body>
+<div class="visible-sm-block visible-md-block visible-xs-block" >
+<p style="text-align: center;font-size: 40px;color: green">请用全屏模式浏览本页面</p>
+</div>
+<div class="visible-lg-block hidden-sm hidden-md hidden-xs">
+    <div class="site-ad-bar container-fluid"></div>
+    <nav class="navbar navbar-default " style="background: rgb(51,51,51);border: 0px;height: 10px">
+        <li class="container-fluid" style="height: 20px" >
+            <ul class="nav navbar-nav daohang1" >
+                <li><a  href="">小米商城</a></li>
+                <li><a href="">MIUI</a></li>
+                <li><a href="">米聊</a></li>
+                <li><a href="">游戏</a></li>
+                <li><a href="">多看阅读</a></li>
+                <li><a href="">云服务</a></li>
+                <li><a href="">金融</a></li>
+                <li><a href="">米币</a></li>
+                <li><a href="">小米商城手机版</a></li>
+                <li><a href="">问题反馈</a></li>
+                <li><a href="">Select Region</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" >
+                <li ><a href="javascript:" style="padding: 0px;margin-top: -5px;margin-right:10px;color: #FFF" id="zhanghu"></a></li>
+                <li><a href="javascript:" style="padding: 0px;margin-top: -5px" id="zhuce">注册</a></li>
+                <li><a href="个人中心.html" style="margin-top: -20px">个人中心</a></li>
+                <li><a href="javascript:" style="margin-top: -20px" id="zhuxiao">注销</a></li>
+                <li class="btn dropdown-toggle" type="button" id="gouwu"  data-toggle="dropdown" style="background: #c0c0c0;height: 50px;margin-top: -20px ">
+                    <a href="" style="margin-top: -5px;"> 购物车&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" ></span></a>
+                </li>
+
+                <ul class="dropdown-menu cart" id="x-shop"  >
+                        <li  class="dropdown-header row" >
+                            <div class="col-lg-4">
+                                <img src="img/x-mi1.png" alt=""><p style="display: inline">
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="">小米6高贴 模</a>
+
+                                <p>
+                                    <a href="#" class="del">删除</a>
+                                </p>
+                                <span class="price">49</span>元一件
+                            </div>
+                            <div class="col-lg-4 total">
+                                <button class="reduce">-</button>
+                                <span class="to">0</span>
+                                <button class="plus">+</button>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li  class="dropdown-header row">
+                            <div class="col-lg-4">
+                                <img src="img/x-mi2.png" alt=""><p style="display: inline">
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="">小米6高贴 模</a>
+
+                                <p><a href="#" class="del">删除</a>
+                                </p>
+                                <span class="price">22</span>元一件
+                            </div>
+                            <div class="col-lg-4 total">
+                                <button class="reduce">-</button>
+                                <span class="to">0</span>
+                                <button class="plus">+</button>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li  class="dropdown-header row" >
+                            <div class="col-lg-4">
+                                <img src="img/x-mi3.png" alt=""><p style="display: inline">
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="">小米6手机</a>
+
+                                <p><a href="#" class="del">删除</a>
+                                </p>
+                                <span class="price">2279</span>元一件
+                            </div>
+                            <div class="col-lg-4 total">
+                                <button class="reduce">-</button>
+                                <span class="to">0</span>
+                                <button class="plus">+</button>
+                            </div>
+                        </li>
+                        <li class="row dropdown-header">
+                            <div class="col-lg-5" style="font-size: 30px">
+                                总共：
+                                <span class="totalNum">0</span>件
+                                <p>总价 <span class="tatol-price">0</span>￥</p>
+                            </div>
+                        </li>
+                        <li >
+                         <button class="jiesuan btn-success col-lg-12" style="height: 40px;background: green;border: 0px">结算</button>
+                    </li>
+                </ul>
+            </ul>
+        </li>
+    </nav>
+<div class="container">
+    <div class="row" >
+         <div class="col-lg-2">
+         <img src="img/mi.png" alt="" >
+         </div>
+        <div class="col-lg-7">
+            <nav class="navbar "  >
+                <div class="container-fluid"  >
+                    <ul class="nav navbar-nav daohang2" style="margin-top:5px;" >
+                        <li>
+                            <a  href="#ac"  data-toggle="collapse">小米手机</a>
+                            <ul class="collapse fade" id="ac" style="position: absolute;z-index: 10">
+                                <li><img src="img/biji.jpg" alt=""></li>
+                                <li><img src="img/biji.jpg" alt=""></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a  href="#af"  data-toggle="collapse">红米</a>
+                            <ul class="collapse fade" id="af" style="position: absolute;z-index: 10">
+                                <li><img src="img/biji.jpg" alt=""></li>
+                                <li><img src="img/biji.jpg" alt=""></li>
+                            </ul>
+                        </li>
+                        <li><a href="">平板-笔记本</a></li>
+                        <li><a href="">电视</a></li>
+                        <li><a href="">盒子-影音</a></li>
+                        <li><a href="">路由器</a></li>
+                        <li><a href="">智能硬件</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col-lg-3">
+            <div class="btn-group">
+                <input type="text" placeholder="小米7" class="btn btn-default" style="height: 55px">
+                <button class="btn btn-default" ><span class="glyphicon glyphicon-search" style="height: 26px;width: 40px;margin-top: 15px" ></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" >
+    <div class="row">
+        <div class="col-lg-12"  >
+           <!-- <img src="img/dami.jpg" alt="" style="height: 451px;width: 1140px;">-->
+            <div id="LBbox" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators" style="display:block;position: absolute;left:1200px;top:400px;width: 60px">
+                    <li data-target="#LBbox" data-slide-to="0" class="active"></li>
+                    <li data-target="#LBbox" data-slide-to="1"></li>
+                    <li data-target="#LBbox" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox" style="z-index: 1" >
+                    <div class="item active">
+                        <a href=""><img src="img/dami.jpg" alt="1 slide" style="height:451px "></a>
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/dami1.jpg" alt="2 slide" style="height:451px "></a>
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/jiuhao1.png" alt="3 slide" style="height:451px ">
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 左按钮 -->
+                <a href="#LBbox" class="left carousel-control" role="button" data-slide="prev" style="height: 450px;position: absolute;left: 215px;z-index: 20">
+                    <span class="glyphicon glyphicon-chevron-left" ></span>
+                    <span class="sr-only">上一页</span>
+                </a>
+                <!-- 右按钮 -->
+                <a href="#LBbox" class="right carousel-control" data-slide="next" style="height: 450px;z-index: 20;" >
+                    <span class="glyphicon glyphicon-chevron-right" ></span>
+                    <span class="sr-only">下一页</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul style="padding-left: 0px;opacity:0.5;background:black;display:block;position:absolute;left: 105px;top: 240px;list-style: none;width:215px;height: 450px;z-index: 9" id="exin">
+
+</ul>
+<div id="float-div" style="z-index: 100">
+         <ul style="position: absolute;top: 240px;left: 65px;z-index: 11" id="ul2">
+            <li >
+               <span style="color: #FFF">手机 电话卡</span>
+                <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+            </li>
+             <li >
+                 <span style="color: #FFF">手机 电话卡</span>
+                 <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+             </li>
+             <li >
+                 <span style="color: #FFF">手机 电话卡</span>
+                 <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+             </li>
+             <li >
+                 <span style="color: #FFF">手机 电话卡</span>
+                 <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+             </li>
+             <li >
+                 <span style="color: #FFF">手机 电话卡</span>
+                 <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+             </li>
+             <li >
+                 <span style="color: #FFF">手机 电话卡</span>
+                 <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+             </li>
+             <li >
+                 <span style="color: #FFF">手机 电话卡</span>
+                 <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+             </li>
+             <li >
+                 <span style="color: #FFF">手机 电话卡</span>
+                 <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+             </li>
+             <li >
+                 <span style="color: #FFF">手机 电话卡</span>
+                 <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+             </li>
+         </ul>
+        <ul id="float-right" style="background:#FFF;z-index: 100">
+            <li >
+                <img src="img/x-mi1.png" alt="">
+                <p style="display: inline-block">小米1</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米1s</p>
+            </li>
+            <li >
+                <img src="img/x-mi1.png" alt="">
+                <p style="display: inline-block">小米2</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米3</p>
+
+            </li>
+            <li style=>
+                <img src="img/x-mi1.png" alt="">
+                <p style="display: inline-block">小米4s</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米5</p>
+            </li>
+            <li >
+                <img src="img/x-mi1.png" alt="">
+                <p style="display: inline-block">小米6</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米7</p>
+            </li>
+            <li>
+                <img src="img/x-mi2.png" alt="">
+                <p style="display: inline-block">小米8</p>
+            </li>
+        </ul>
+</div>
+<div class="container x-bla" >
+        <div class="row">
+         <div class="col-lg-3 x-phone">
+            <div class="col-lg-4 ">
+                <img src="img/1.png" alt="">
+                <h5><a href="#">选购手机</a></h5>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/2.png" alt="">
+                <h5><a href="#">企业团购</a></h5>
+            </div>
+            <div class="col-lg-4 x-F">
+                <img src="img/3.png" alt="">
+                <h5><a href="#">F码通道</a></h5>
+            </div>
+            <div class="col-lg-4 x-2a">
+                <img src="img/4.png" alt="">
+                <h5><a href="#">米粉卡</a></h5>
+            </div>
+            <div class="col-lg-4 x-2a">
+                <img src="img/5.png" alt="">
+                <h5><a href="#">以旧换新</a></h5>
+            </div>
+            <div class="col-lg-4 x-2a">
+                <img src="img/6.png" alt="">
+                <h5><a href="#">话费充值</a></h5>
+            </div>
+         </div>
+        <div class="col-lg-3 yellow">
+            <h4>红米Note4X</h4>
+            <h6>超长续航，充电5分钟，兴奋两小时</h6>
+            <img src="img/7.png" alt="">
+        </div>
+        <div class="col-lg-3 green">
+            <h4>限时优惠</h4>
+            <h6>只要998，红米带回家</h6>
+            <img src="img/8.png" alt="">
+        </div>
+        <div class="col-lg-3 red">
+            <h4>小米路由器</h4>
+            <h6>今夜不断电</h6>
+            <img src="img/9.png" alt="">
+        </div>
+    </div>
+</div>
+<div>
+
+<!-- 明星单品-->
+    <div id="box">
+        <ul id="star">
+            <li id="star-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 thumbnail" style="height: 300px;width: 270px">
+                            <img src="img/yashua.png" alt="" >
+                        </div>
+                        <div class="col-lg-3 thumbnail" style="height: 300px;width: 270px">
+                            <img src="img/yashua2.jpg" alt="">
+                        </div>
+                        <div class="col-lg-3 thumbnail" style="height: 300px;width: 270px">
+                            <img src="img/yashua.png" alt="">
+                        </div>
+                        <div class="col-lg-3 thumbnail" style="height: 300px;width: 270px">
+                            <img src="img/yashua2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <div style="width: 100px"></div>
+            <li id="star-2">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-lg-3 thumbnail" style="height: 300px;width: 270px">
+                            <img src="img/yashua.png" alt="" >
+                        </div>
+                        <div class="col-lg-3 thumbnail" style="height: 300px;width: 270px">
+                            <img src="img/yashua2.jpg" alt="">
+                        </div>
+                        <div class="col-lg-3 thumbnail" style="height: 300px;width: 270px">
+                            <img src="img/yashua.png" alt="">
+                        </div>
+                        <div class="col-lg-3 thumbnail" style="height: 300px;width: 270px">
+                            <img src="img/yashua2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <ol>
+            <li class=" active">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </li>
+            <li> <span class="glyphicon glyphicon-chevron-right"></span></li>
+
+        </ol>
+    </div>
+
+
+</div>
+    <!--家电-->
+<div style="height: 700px;width: auto;background: gainsboro;margin-top:50px;position: relative;z-index: 1" id="jiuh">
+        <div class="container">
+            <div class="row" >
+                <div class="col-lg-2" style="margin-top:70px ">
+                    <strong style="font-size: 20px;font-family: 方正兰亭超细黑简体;margin-left:90px;margin-top: 30px">家电</strong>
+                </div>
+                <div class="col-lg-10" style="padding: 0px" >
+                    <nav class="navbar navbar-right " style="padding: 0px;margin:0px;margin-top: 70px" >
+                        <div class="container-fluid"  >
+                            <ul class="nav navbar-nav" id="house-tvv">
+                                <li><a  href="" >热门</a></li>
+                                <li><a href="">电视影音</a></li>
+                                <li><a href="">电脑</a></li>
+                                <li><a href="">家具</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div id="xsw">
+
+             <ul class="container house-jiadian" id="house-jiadian" style="z-index: 10;display: block" >
+
+                 <div class="row">
+                     <div class="col-lg-2 thumbnail" style="margin-top: -5px;background: rgb(220,220,220);height: 0px;" >
+                         <div class="thumbnail"  style="height: 240px;margin-top:-8px;">
+                         <img src="img/jing.jpg"  >
+                     </div>
+                         <div class="thumbnail"  style="height: 240px;margin-top:-8px;">
+                             <img src="img/jing1.jpg"  >
+                         </div>
+                     </div>
+                     <div class="col-lg-2">
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px;" >
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                     </div>
+                     <div class="col-lg-2">
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                     </div>
+                     <div class="col-lg-2">
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                     </div>
+                     <div class="col-lg-2">
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                     </div>
+                     <div class="col-lg-2">
+                         <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                             <img src="img/t1.png" alt="">
+                             <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                             <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                             <p style="text-align: center;color: orangered">2399</p>
+                         </div>
+                         <div class="row ">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/she001.jpg" class="" alt="" style="height: 70px;width: 70px;margin-left: 80px;margin-top: 15px">
+                                <div style="margin-top: -55px;margin-left: 10px">
+                                    <p><a href="" style="text-decoration: none;color: black">小白摄像机</a></p>
+                                    <p style="margin-top: -10px">399元</p>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="row">
+                             <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                 <img src="img/more-m.png" class="" alt="" style="height: 50px;width: 50px;margin-left: 90px;margin-top: 20px">
+                                 <div style="margin-top: -40px;margin-left: 10px">
+                                     <p><a href="家电.html" style="text-decoration: none;color: black" id="jiadian">浏览更多</a></p>
+                                     <p style="margin-top: -10px">热门</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </ul>
+
+             <ul class="container house-tv" id="house-tv" style="z-index:10;">
+
+                    <div class="row">
+                        <div class="col-lg-2 thumbnail" style="margin-top: -10px"  >
+                            <img src="img/jiuhao.jpg"  >
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                                <img src="img/t1.png">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                                <img src="img/t1.png" alt="">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                                <img src="img/t1.png" alt="">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                                <img src="img/t1.png" alt="">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                                <img src="img/t1.png" alt="">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                                <img src="img/photo.jpg" alt="">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                                <img src="img/photo.jpg" alt="">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                                <img src="img/photo.jpg" alt="">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                                <img src="img/photo.jpg" alt="">
+                                <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                                <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                                <p style="text-align: center;color: orangered">2399</p>
+                            </div>
+                            <div class="row ">
+                                <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                    <img src="img/she001.jpg" class="" alt="" style="height: 70px;width: 70px;margin-left: 80px;margin-top: 15px">
+                                    <div style="margin-top: -55px;margin-left: 10px">
+                                        <p><a href="" style="text-decoration: none;color: black">小白摄像机</a></p>
+                                        <p style="margin-top: -10px">399元</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                    <img src="img/more-m.png" class="" alt="" style="height: 50px;width: 50px;margin-left: 90px;margin-top: 20px">
+                                    <div style="margin-top: -40px;margin-left: 10px">
+                                        <p><a href="家电.html" style="text-decoration: none;color: black">浏览更多</a></p>
+                                        <p style="margin-top: -10px">热门</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </ul>
+            <ul class="container house-tv" id="house-tv1" style="z-index:10;">
+
+                <div class="row">
+                    <div class="col-lg-2 thumbnail" style="margin-top: -10px"  >
+                        <img src="img/jiuhao.jpg"  >
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="row ">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/she001.jpg" class="" alt="" style="height: 70px;width: 70px;margin-left: 80px;margin-top: 15px">
+                                <div style="margin-top: -55px;margin-left: 10px">
+                                    <p><a href="" style="text-decoration: none;color: black">小白摄像机</a></p>
+                                    <p style="margin-top: -10px">399元</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/more-m.png" class="" alt="" style="height: 50px;width: 50px;margin-left: 90px;margin-top: 20px">
+                                <div style="margin-top: -40px;margin-left: 10px">
+                                    <p><a href="家电.html" style="text-decoration: none;color: black">浏览更多</a></p>
+                                    <p style="margin-top: -10px">热门</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <ul class="container house-tv" id="house-tv2" style="z-index:10;">
+
+                <div class="row">
+                    <div class="col-lg-2 thumbnail" style="margin-top: -10px"  >
+                        <img src="img/jiuhao.jpg"  >
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="row ">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/she001.jpg" class="" alt="" style="height: 70px;width: 70px;margin-left: 80px;margin-top: 15px">
+                                <div style="margin-top: -55px;margin-left: 10px">
+                                    <p><a href="" style="text-decoration: none;color: black">小白摄像机</a></p>
+                                    <p style="margin-top: -10px">399元</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/more-m.png" class="" alt="" style="height: 50px;width: 50px;margin-left: 90px;margin-top: 20px">
+                                <div style="margin-top: -40px;margin-left: 10px">
+                                    <p><a href="家电.html" style="text-decoration: none;color: black">浏览更多</a></p>
+                                    <p style="margin-top: -10px">热门</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+
+         </div>
+    </div>
+ <!--智能-->
+    <div style="height: 700px;width: auto;background: gainsboro;margin-top:50px;position: relative;z-index: 1" id="zhineng">
+        <div class="container">
+            <div class="row" >
+                <div class="col-lg-2" style="margin-top:70px ">
+                    <strong style="font-size: 20px;font-family: 方正兰亭超细黑简体;margin-left:90px;margin-top: 30px">只能</strong>
+                </div>
+                <div class="col-lg-10" style="padding: 0px" >
+                    <nav class="navbar navbar-right " style="padding: 0px;margin:0px;margin-top: 70px" >
+                        <div class="container-fluid"  >
+                            <ul class="nav navbar-nav" id="house-tvv1">
+                                <li><a  href="" >热门</a></li>
+                                <li><a href="">出现</a></li>
+                                <li><a href="">酷玩</a></li>
+                                <li><a href="">健康</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div id="xsw1">
+
+            <ul class="container house-jiadian1" id="house-jiadian1" style="z-index: 10;display: block" >
+
+                <div class="row">
+                    <div class="col-lg-2 thumbnail" style="margin-top: -10px" >
+                        <img src="img/jiuhao.jpg"  >
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;" >
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="row ">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/she001.jpg" class="" alt="" style="height: 70px;width: 70px;margin-left: 80px;margin-top: 15px">
+                                <div style="margin-top: -55px;margin-left: 10px">
+                                    <p><a href="" style="text-decoration: none;color: black">小白摄像机</a></p>
+                                    <p style="margin-top: -10px">399元</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/more-m.png" class="" alt="" style="height: 50px;width: 50px;margin-left: 90px;margin-top: 20px">
+                                <div style="margin-top: -40px;margin-left: 10px">
+                                    <p><a href="智能.html" style="text-decoration: none;color: black">浏览更多</a></p>
+                                    <p style="margin-top: -10px">热门</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+
+            <ul class="container house-tv" id="house-tva" style="z-index:10;">
+
+                <div class="row">
+                    <div class="col-lg-2 thumbnail" style="margin-top: -10px"  >
+                        <img src="img/jiuhao.jpg"  >
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/t1.png">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/t1.png" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="row ">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/she001.jpg" class="" alt="" style="height: 70px;width: 70px;margin-left: 80px;margin-top: 15px">
+                                <div style="margin-top: -55px;margin-left: 10px">
+                                    <p><a href="" style="text-decoration: none;color: black">小白摄像机</a></p>
+                                    <p style="margin-top: -10px">399元</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/more-m.png" class="" alt="" style="height: 50px;width: 50px;margin-left: 90px;margin-top: 20px">
+                                <div style="margin-top: -40px;margin-left: 10px">
+                                    <p><a href="智能.html" style="text-decoration: none;color: black">浏览更多</a></p>
+                                    <p style="margin-top: -10px">热门</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <ul class="container house-tv" id="house-tv1a" style="z-index:10;">
+
+                <div class="row">
+                    <div class="col-lg-2 thumbnail" style="margin-top: -10px"  >
+                        <img src="img/jiuhao.jpg"  >
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="row ">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/she001.jpg" class="" alt="" style="height: 70px;width: 70px;margin-left: 80px;margin-top: 15px">
+                                <div style="margin-top: -55px;margin-left: 10px">
+                                    <p><a href="" style="text-decoration: none;color: black">小白摄像机</a></p>
+                                    <p style="margin-top: -10px">399元</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/more-m.png" class="" alt="" style="height: 50px;width: 50px;margin-left: 90px;margin-top: 20px">
+                                <div style="margin-top: -40px;margin-left: 10px">
+                                    <p><a href="智能.html" style="text-decoration: none;color: black">浏览更多</a></p>
+                                    <p style="margin-top: -10px">热门</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <ul class="container house-tv" id="house-tv2a" style="z-index:10;">
+
+                <div class="row">
+                    <div class="col-lg-2 thumbnail" style="margin-top: -10px"  >
+                        <img src="img/jiuhao.jpg"  >
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/biji.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px;">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="thumbnail" style="height: 240px;margin-top:-8px; ">
+                            <img src="img/photo.jpg" alt="">
+                            <p style="text-align: center;margin-bottom: 0px">小米电视4A 48标准版</p>
+                            <p style="text-align: center;color: grey;">2GB+8GB 大容量存储</p>
+                            <p style="text-align: center;color: orangered">2399</p>
+                        </div>
+                        <div class="row ">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/she001.jpg" class="" alt="" style="height: 70px;width: 70px;margin-left: 80px;margin-top: 15px">
+                                <div style="margin-top: -55px;margin-left: 10px">
+                                    <p><a href="" style="text-decoration: none;color: black">小白摄像机</a></p>
+                                    <p style="margin-top: -10px">399元</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="thumbnail" style="height: 110px;width: 165px;margin-left: 15px;margin-top: -8px">
+                                <img src="img/more-m.png" class="" alt="" style="height: 50px;width: 50px;margin-left: 90px;margin-top: 20px">
+                                <div style="margin-top: -40px;margin-left: 10px">
+                                    <p><a href="智能.html" style="text-decoration: none;color: black">浏览更多</a></p>
+                                    <p style="margin-top: -10px">热门</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- 第一个轮播-->
+            <div class="col-lg-3">
+
+                <div style="width: 270px;height: 400px;border: 1px #c0c0c0 solid;margin-left: -20px">
+                    <div id="myCarousel" class="carousel slide">
+
+                        <ol class="carousel-indicators" style="margin-top: 350px;">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active" style="position: absolute;top: 1px;left: 110px;background: #999;width:8px;height: 8px;"></li>
+                            <li data-target="#myCarousel" data-slide-to="1" style="position: absolute;top: 0px;left: 80px;background: #999;width:8px;height: 8px;"></li>
+                            <li data-target="#myCarousel" data-slide-to="2" style="position: absolute;top: 0px;left: 50px;background: #999;width:8px;height: 8px; "></li>
+                        </ol>
+
+                        <div class="carousel-inner carousel-inner1">
+                            <div class="item active">
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p ><small style="text-align: center">"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo2.jpg" alt="First slide">
+                            </div>
+                            <div class="item">
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p ><small style="text-align: center">"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo1.png" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p ><small style="text-align: center">"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo3.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev" style="width: 30px;height: 30px;margin-top: 210px">&lsaquo;
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next" style="width: 30px;height: 30px;margin-top: 210px">>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 第二个轮播-->
+            <div class="col-lg-3">
+                <div style="width: 270px;height: 400px;border: 1px #c0c0c0 solid;margin-left: -15px">
+                    <div id="myCarousel2" class="carousel slide">
+
+                        <ol class="carousel-indicators" style="margin-top: 350px;">
+                            <li data-target="#myCarousel2" data-slide-to="0" class="active" style="position: absolute;top: 1px;left: 110px;background: #999;width:8px;height: 8px;"></li>
+                            <li data-target="#myCarousel2" data-slide-to="1" style="position: absolute;top: 0px;left: 80px;background: #999;width:8px;height: 8px;"></li>
+                            <li data-target="#myCarousel2" data-slide-to="2" style="position: absolute;top: 0px;left: 50px;background: #999;width:8px;height: 8px; "></li>
+                        </ol>
+                        <div class="carousel-inner carousel-inner1">
+                            <div class="item active">
+                                <h2 >图书</h2>
+                                <a href="">哈利波特与被诅咒的孩子</a>
+                                <p><small>"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo3.jpg" alt="First slide">
+                            </div>
+                            <div class="item">
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p ><small style="text-align: center">"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo2.jpg" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p ><small style="text-align: center">"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo1.png" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control left" href="#myCarousel2" data-slide="prev" style="width: 30px;height: 30px;margin-top: 210px">&lsaquo;
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel2" data-slide="next" style="width: 30px;height: 30px;margin-top: 210px">>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 第三个轮播-->
+            <div class="col-lg-3">
+                <div style="width: 270px;height: 400px;border: 1px #c0c0c0 solid;margin-left: -10px">
+                    <div id="myCarousel3" class="carousel slide">
+                        <ol class="carousel-indicators" style="margin-top: 350px;">
+                            <li data-target="#myCarousel3" data-slide-to="0" class="active" style="position: absolute;top: 1px;left: 110px;background: #999;width:8px;height: 8px;"></li>
+                            <li data-target="#myCarousel3" data-slide-to="1" style="position: absolute;top: 0px;left: 80px;background: #999;width:8px;height: 8px;"></li>
+                            <li data-target="#myCarousel3" data-slide-to="2" style="position: absolute;top: 0px;left: 50px;background: #999;width:8px;height: 8px; "></li>
+                        </ol>
+                        <div class="carousel-inner carousel-inner1">
+                            <div class="item active" >
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p><small>"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo4.png" alt="First slide">
+                            </div>
+                            <div class="item">
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p><small>"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo5.jpg" alt="Second slide">
+                            </div>
+                            <div class="item" >
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p><small>"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo2.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control left" href="#myCarousel3" data-slide="prev" style="width: 30px;height: 30px;margin-top: 210px">&lsaquo;
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel3" data-slide="next" style="width: 30px;height: 30px;margin-top: 210px">>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 第四个轮播-->
+            <div class="col-lg-3">
+                <div style="width: 270px;height: 400px;border: 1px #c0c0c0 solid;margin-left: -5px">
+                    <div id="myCarousel4" class="carousel slide">
+                        <ol class="carousel-indicators" style="margin-top: 350px;">
+                            <li data-target="#myCarousel4" data-slide-to="0" class="active" style="position: absolute;top: 1px;left: 110px;background: #999;width:8px;height: 8px;"></li>
+                            <li data-target="#myCarousel4" data-slide-to="1" style="position: absolute;top: 0px;left: 80px;background: #999;width:8px;height: 8px;"></li>
+                            <li data-target="#myCarousel4" data-slide-to="2" style="position: absolute;top: 0px;left: 50px;background: #999;width:8px;height: 8px; "></li>
+                        </ol>
+                        <div class="carousel-inner carousel-inner1">
+                            <div class="item active" style="height: 360px">
+                                <h2>图书</h2>
+                                <a href="">哈利波特与被诅咒的孩子</a>
+                                <p><small>"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo5.jpg" alt="First slide">
+                            </div>
+                            <div class="item">
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p><small>"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo4.png" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <h2 >图书</h2>
+                                <a href="" >哈利波特与被诅咒的孩子</a>
+                                <p><small>"哈利·波特"第八个故事中文版震撼来袭！</small></p>
+                                <p>333￥</p>
+                                <img src="img/lunbo3.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control left" href="#myCarousel4" data-slide="prev" style="width: 30px;height: 30px;margin-top: 210px">&lsaquo;
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel4" data-slide="next" style="width: 30px;height: 30px;margin-top: 210px">>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container" style="margin-top: 30px;margin-bottom: 20px">
+    <div class="row">
+        <div class="nav nav-tabs nav-justified " >
+            <li>
+                <a class="btn-default" href="#"><i class="glyphicon glyphicon-file"></i>&nbsp;预约维修服务</a>
+            </li>
+            <li><a class="btn-default" href="#"><i class="glyphicon glyphicon-file"></i>&nbsp;预约维修服务</a></li>
+            <li><a class="btn-default" href="#"><i class="glyphicon glyphicon-file"></i>&nbsp;预约维修服务</a></li>
+            <li ><a class="btn-default" href="#"><i class="glyphicon glyphicon-file"></i>&nbsp;预约维修服务</a></li>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px">
+        <div class="col-lg-10">
+            <div class="row" id="helpCent">
+                <div class="col-lg-2">
+                    帮助中心
+                    <div class="row">
+                        <div class="col-lg-12" >
+                            <li><a href="" class="btn-default">帮助中心</a></li>
+                            <li><a href="" class="btn-default">帮助中心</a></li>
+                            <li><a href="" class="btn-default">帮助中心</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    服务支持
+                    <div class="row">
+                        <div class="col-lg-12"  >
+                            <li><a href="" class="btn-default">服务支持</a></li>
+                            <li><a href="" class="btn-default">服务支持</a></li>
+                            <li><a href="" class="btn-default">服务支持</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    企业管理
+                    <div class="row">
+                        <div class="col-lg-12"  >
+                            <li><a href="" class="btn-default">企业管理</a></li>
+                            <li><a href="" class="btn-default">企业管理</a></li>
+                            <li><a href="" class="btn-default">企业管理</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    法律法规
+                    <div class="row">
+                        <div class="col-lg-12" >
+                            <li><a href="" class="btn-default">法律法规</a></li>
+                            <li><a href="" class="btn-default">法律法规</a></li>
+                            <li><a href="" class="btn-default">法律法规</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    敬老院
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <li><a href="" class="btn-default">敬老院</a></li>
+                            <li><a href="" class="btn-default">敬老院</a></li>
+                            <li><a href="" class="btn-default">敬老院</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    福利中心
+                    <div class="row">
+                        <div class="col-lg-12" >
+                            <li><a href="" class="btn-default">福利中心</a></li>
+                            <li><a href="" class="btn-default">福利中心</a></li>
+                            <li><a href="" class="btn-default">福利中心</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-2">
+            <p style="color: orangered;font-size: 20px;margin-left: 10px;margin-bottom: 0px">400-111-555</p>
+            <p>周一至周日 8:00-18:00 <br><small style="margin-left: 20px">（仅收市话费）</small></p>
+
+            <div ><a href="" class="btn btn-default" id="hot"><span class="glyphicon glyphicon-apple">24小时客服在线</span></a></div>
+        </div>
+    </div>
+</div>
+<div style="background:rgb(228,228,228);margin-bottom: 20px;height: 140px" >
+    <div class="container" style="padding-top: 40px">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-lg-1" style="margin:0px;padding: 0px">
+                        <img src="img/mibotton.png" alt="" class="pull-right" >
+                    </div>
+                    <div class="col-lg-11" style="margin-left:-10px" >
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="nav navbar-nav bot-bot navbar-right" >
+                                    <li><a  href="">小米商城 <span>|</span> </a></li>
+                                    <li><a href="">MIUI <span>|</span> </a></li>
+                                    <li><a href="">米聊 <span>|</span> </a></li>
+                                    <li><a href="">游戏 <span>|</span> </a></li>
+                                    <li><a href="">多看阅读 <span>|</span> </a></li>
+                                    <li><a href="">云服务 <span>|</span> </a></li>
+                                    <li><a href="">金融 <span>|</span> </a></li>
+                                    <li><a href="">米币 <span>|</span> </a></li>
+                                    <li><a href="">小米商城手机版 <span>|</span> </a></li>
+                                    <li><a href="">问题反馈<span>|</span> </a></li>
+                                    <li><a href="">Select Region</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12" style="margin-left: -35px">
+                                <ul class="nav navbar-nav bot-cet navbar-right" >
+                                    <li><a  href="">&copy;mi.com&nbsp;</a></li>
+                                    <li>京ICP证110507号</li>
+                                    <li><a href="">京ICP备10003423号</a></li>
+                                    <li><a href="">京公网10320309034号  </a></li>
+                                    <li><a href="">京网文9803247238号  </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-lg-12">
+                                <p id="weihe" >违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 " id="four-img">
+                <li><img src="img/yinsi.png" alt=""></li>
+                <li><img src="img/yinsi.png" alt=""></li>
+                <li><img src="img/yinsi.png" alt=""></li>
+                <li><img src="img/yinsi.png" alt=""></li>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

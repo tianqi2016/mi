@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get</title>
+    <script src="../js/jquery.js"></script>
+
+    <script>
+
+    </script>
+</head>
+<body>
+<input type="text" id="txtUserName">
+<input type="password" id="txtPwd">
+<input type="button" value="按钮1" onclick="my()">
+<input type="button" value="按钮2" onclick="my1()">
+<div id="tian"></div>
+<script>
+    function my() {
+        var username=$('#txtUserName').val();
+        var pwd=$('#txtPwd').val();
+        /*sessionStorage.setItem('k_username',username);
+        sessionStorage.setItem('k_pwd',pwd);*/
+        localStorage.setItem('k_username',username);
+        localStorage.setItem('k_pwd',pwd);
+        alert('存储成功');
+    }
+    /*function my1() {
+        alert(sessionStorage.getItem('k_username'));
+        alert(sessionStorage.getItem('k_pwd'));
+    }*/
+    function my1() {
+       // localStorage.removeItem('k_username'); 删除username;
+        // localStorage.clear();删除所有
+        alert(localStorage.getItem('k_username'));
+        alert(localStorage.getItem('k_pwd'));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米帐号-登录</title>
+    <link rel="shortcut icon"  href="img/titlelogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/登录页.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 col-lg-offset-1">
+            <img src="img/mistore_logo.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="container-fluid liang-img">
+    <div class="row">
+        <div class="col-lg-12 col-lg-offset-1">
+            <img src="img/liang.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div style="background: #FFF;height: 526px;width: 400px;position: absolute;top: 140px;right: 100px">
+
+        <div class="row" id="saoma">
+            <div class="col-lg-4 col-lg-offset-2 " >
+                <a  href="javascript:void(0);" >帐号登录</a>
+            </div>
+            <div class="col-lg-1" style="margin-left:-15px ">
+                <span style="font-size:30px;color: #c0c0c0">|</span>
+            </div>
+            <div class="col-lg-4 ">
+                <a  href="javascript:void(0);">扫码登录</a>
+            </div>
+        </div>
+    <div  id="disdeng">
+        <div class="row email" >
+            <div class="col-lg-3 col-lg-offset-1">
+                <input type="text" placeholder="邮箱/手机号码/小米帐号" id="loginName">
+            </div>
+        </div>
+     <div class="row password" >
+        <div class="col-lg-3 col-lg-offset-1">
+            <input type="text" placeholder="密码" id="loginPsd">
+         </div>
+      </div>
+     <div class="row login">
+        <div class="col-lg-3 col-lg-offset-1">
+            <input class="" type="button" value="立即登录" onclick="login()">
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 password-bot">
+                    <a href="">注册小米帐号</a>
+                    <span style="color: #c0c0c0;font-size: 16px;">|</span>
+                    <a href="修改密码.html">忘记密码？</a>
+                </div>
+            </div>
+        </div>
+     </div>
+        <div class="row">
+
+            <fieldset style="margin-left: 50px">
+                <legend style='text-align: center;margin-top:20px;position: absolute;width: 350px '>其他方式登录</legend>
+            </fieldset>
+        </div>
+   </div>
+
+
+
+</div>
+<div style="height: 70px;margin-top: 60px">
+    <ul id="bot-li">
+        <li ><a href="">简体</a><span style="margin-left: 10px">|</span></li>
+        <li style="padding-left: -10px"><a href="">繁体</a><span style="margin-left: 10px">|</span></li>
+        <li><a href="">English</a><span style="margin-left: 10px">|</span></li>
+        <li><a href="">常见问题</a></li>
+    </ul>
+    <br>
+    <div style="margin-left:440px;margin-top: 10px ">
+        <p>
+            <span style="font-size: 10px">小米公司版权所有-京ICP备10046444-</span>
+            <span><a href="" style="color: #333;text-decoration: none;font-size: 10px"><img src="img/wangjng.png" alt="">京公网安备11010802020134号</a></span>
+            <span style="font-size: 10px">-京ICP证110507号</span>
+        </p>
+    </div>
+</div>
+
+
+<script>
+
+    function login(){
+        if(NoKong()){
+            if(localStorage.user){
+                arr = eval(localStorage.user);//获取localStoragevar
+                k = 0;
+                for(e in arr){
+                    if($('#loginName').val()==arr[e].loginName){
+                        if($('#loginPsd').val()==arr[e].loginPsd){
+                            console.log('登录成功');
+                            clear();
+                            k = 0;
+                        window.location.href='首页.html';
+                            return;
+                        }else{
+                            alert('密码错误');
+                            clear();
+                            k = 0;
+                            return;
+                        }
+                    }else{
+                        k = 1;
+                    }
+                }if(k==1){
+                    alert('用户名不存在');
+                    clear();
+                }
+            }else{
+                alert('用户名不存在');
+                clear();
+            }
+        }
+    }
+    function clear(){
+        $('#loginName').val('');
+        $("#loginPsd").val('');
+    }
+    function NoKong(){
+        if($('#loginName').val()==""){
+            alert('用户名不能为空');
+            return false;
+        }else if($('#loginPsd').val()==""){
+            alert('密码不能为空');
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>
+

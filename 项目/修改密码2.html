@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5;url=登录页.html">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<marquee behavior="alternate" direction="right" style="width: 500px;margin: 200px 400px">
+    <h1>密码修改成功，<span style="color: green" id="span">5</span>秒后自动跳转</h1>
+</marquee>
+
+<a href="登录页.html" style="position: absolute;left:600px;top:300px;text-decoration: none">直接进入</a>
+<script>
+    var x=1;
+    var t=$('#span').html();
+    setInterval(function () {
+            t--;
+        $('#span').html(t);
+    },1000)
+</script>
+</body>
+</html>

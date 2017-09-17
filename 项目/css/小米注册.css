@@ -1,0 +1,110 @@
+body{
+    background: rgb(245,245,245);
+    overflow-x: hidden;
+}
+.x-big{
+    height: 700px;
+    width: 800px;
+    background:#FFF;
+    margin-left: 300px;
+}
+.x-icon{
+    background: rgb(255,103,0);
+    width: 60px;
+    height: 60px;
+    margin-left: 350px;
+    margin-bottom:30px ;
+}
+.x-icon div{
+    padding-top:10px;
+    font-size: 30px;
+    color: #FFF;
+}
+.x-totil h2{
+    text-align: center;
+}
+#x-state{
+    width: 320px;
+    height:40px;
+}
+#x-stata{
+    height: 40px;
+}
+#x-statc{
+    margin-top: 40px;;
+    margin-left: 200px;
+}
+#x-ul{
+    width: 320px;
+}
+#x-p{
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 230px;
+}
+#x-statee{
+    width: 90px;
+    height:40px;
+}
+#x-stataa{
+    height: 40px;
+    width: 260px;
+}
+#x-statcc{
+    margin-top: 10px;;
+    margin-left: 200px;
+}
+#x-ull{
+    width: 320px;
+}
+#x-phone{
+    height: 40px;
+    width: 260px;
+}
+#x-btn{
+    height: 40px;
+    width: 86px;
+}
+#x-login{
+    width: 380px;
+    margin-top: 20px;
+    margin-left: 200px;
+
+}
+#x-login div{
+    height: 50px;
+    background: rgb(255,103,0);
+}
+#x-login div p{
+    text-align: center;
+    line-height: 50px;
+}
+#x-logi{
+    width: 380px;
+    margin-top: 20px;
+    margin-left: 200px;
+
+}
+#x-logi div{
+    height: 50px;
+    background: rgb(255,103,0);
+}
+#x-logi div p{
+    text-align: center;
+    line-height: 50px;
+}
+#x-ul2 li{
+    float: left;
+    list-style: none;
+    margin:10px 0px 10px 30px;
+}
+#det{
+    text-decoration: none;
+}
+#last{
+    margin-bottom: 20px;
+}
+#x-login p a{
+color: #FFF;
+    text-decoration: none;
+}

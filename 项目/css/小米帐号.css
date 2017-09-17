@@ -1,0 +1,208 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(249,249,249);
+}
+.quit a{
+   color: #ababab;
+    text-decoration: none;
+}
+.quit a:hover{
+    color: orangered;
+}
+.six-pane{
+    margin-left: 210px;
+    position: relative;
+}
+#acco{
+    width: 956px;
+    height: 485px;
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;
+    background: #FFF;
+}
+#all-biao ul{
+    border: 0px;
+}
+#all-biao ul li a{
+    border: 0px;
+    background:rgb(249,249,249) ;
+}
+#acco div div h4{
+    color: #101010;
+    line-height: 1.5;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+}
+#two-feng{
+    color: rgb(255,0,0);
+    font-weight: bold;
+    padding: 0 2px;
+    font-size: 20px
+}
+#pas-name{
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+#xiugai{
+   text-decoration: none;
+    display: inline-block;
+    color: #555;
+    background: #fff;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left:455px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 20px;
+
+}
+#xiugai:hover{
+    background-color: rgb(230,230,230);
+}
+#pas-name1{
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+#xiugai1{
+    text-decoration: none;
+    display: inline-block;
+    color: #555;
+    background: #fff;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left:455px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 20px;
+}
+#xiugai1:hover{
+    background-color: rgb(230,230,230);
+}
+#pas-name2{
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+#xiugai2{
+    text-decoration: none;
+    display: inline-block;
+    color: #555;
+    background: #fff;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left:455px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 20px;
+}
+#xiugai2:hover{
+    background-color: rgb(230,230,230);
+}
+#pas-name3{
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+#xiugai3{
+    text-decoration: none;
+    display: inline-block;
+    color: #555;
+    background: #fff;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left:455px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 20px;
+}
+#xiugai3:hover{
+    background-color: rgb(230,230,230);
+}
+.qquan img{
+    width:90px;
+    height: 90px;
+    border-radius:100px;
+    background: grey;
+    position: absolute;
+    left: 800px;
+    top: -50px;
+}
+#person{
+    width: 956px;
+    height: 485px;
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;
+    background: #FFF;
+    margin-top: -485px;
+}
+#bound{
+    width: 956px;
+    height: 485px;
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;
+    background: #FFF;
+    margin-top: -485px;
+}
+#mi{
+    width: 956px;
+    height: 485px;
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;
+    background: #FFF;
+    margin-top: -485px;
+}
+/*
+------------
+*/
+#bot-li{
+    position: absolute;
+    margin-left: 550px;
+}
+#bot-li li{
+    float: left;
+    list-style: none;
+    margin-left:20px ;
+}
+#bot-li li a{
+    color: #333;
+    text-decoration: none;
+    font-size: 10px;
+}
+#bot-li li a:hover{
+    color: black;
+}
+.bot-c{
+   border-bottom: 2px solid #e6e6e6;
+    line-height: 40px;
+}
+.bot-c h3{
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    display: inline
+}
+#jingling{
+background: url("../img/jinglingtu.png") no-repeat;
+background-position:360px 40px ;
+}
+

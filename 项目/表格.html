@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <style>
+        .height-w{
+            background: green;
+        }
+        .btn-danger{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="page-header">
+    <h1>标题
+        <small>副标题</small>
+    </h1>
+</div>
+<div>
+    <label for="search">搜索</label>
+    <input type="text" id="search">
+    <input type="button" value="添加" class="tianjia">
+</div>
+
+    <table>
+    <thead>
+           <th></th>
+           <th>姓名</th>
+           <th>性别</th>
+           <th>收入</th>
+           <th>居住地址</th>
+    </thead>
+    <tbody>
+    </tbody>
+
+         <script >
+             var employees=[];
+             function stringSex(sex) {
+                 if(sex==0){
+                     return '男';
+                 }
+                 else  if(sex==1){
+                     return '女';
+                 }else{
+                     return '未知';
+                 }
+             }
+            // return sex==0?'男':(sex==1?"女":"未知");
+             $.getJSON('employee.json',function (data) {
+                 employees=data;
+
+                 var html='';
+                 for(var i=0,len=employees.length;i<len;i++){
+                     html+='<tr >';
+                     html+='<td ><input type="radio" value="1" name="check"></td>';
+                     html+='<td>'+employees[i].name+'</td>';
+                     html+='<td>'+stringSex(employees[i].sex)+'</td>';
+                     html+='<td  id="tte" class="text-danger text-right lead">'+employees[i].income+'</td>';
+                     html+='<td>'+employees[i].address.city+employees[i].address.detail+'</td>';
+                     html+=' </tr>';
+                 }
+
+                 $('tbody').html(html);
+             })
+             $('tbody').on('click','tr',function () {
+                 $(this).addClass('height-w');
+
+
+                 $(this).siblings().attr('class','');
+                 $(this).find('input[type=radio]').prop('checked',true);
+             })
+             $('#search').on('keyup',function () {
+                 var seletor='';
+                 seletor=':contains('+$(this).val()+')' //contains用来筛选元素，查找文本中含有的元素
+                 $('tbody tr').hide();
+                 $('tbody tr').filter(seletor).show();
+             })
+             $('table').addClass('table table-bordered');
+             $('tbody').addClass('table-striped');
+             $('tbody').find('#tte').on('click',function () {
+                 $(this).addClass('text-right');
+             })
+
+         </script>
+    </table>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html ng-app="ionicApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>注册</title>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+
+<div class="bar bar-header">
+    <div class="h1 title" style="text-align: center">注册</div>
+</div>
+
+<div class="content has-header">
+    <div class="list"style="text-align: center" >
+        <label class="item item-input" >
+            <span class="input-label">用户名：</span>
+            <input type="text"  id="loginName">
+            <div  id="use" style="width: 200px;margin-left: 100px" ></div>
+        </label>
+        <label class="item item-input" s>
+            <span class="input-label">密码：</span>
+            <input type="password" id="loginPsd">
+            <div  id="psd" style="width: 200px;margin-left: 100px" ></div>
+        </label>
+    </div>
+    <div class="padding">
+        <button onclick="ZhuCe()" class="button button-block button-positive"style="position: absolute;margin-left: 650px;margin-top: 50px">注册</button>
+    </div>
+</div>
+
+<script>
+
+    function ZhuCe(){
+        if(NoKong()){
+            var arr = [];
+            if(localStorage.user){
+                arr = eval(localStorage.user);
+                for(e in arr){
+                    if($('#loginName').val()==arr[e].loginName){
+                        alert('该账号已被注册');
+                        clear();
+                        return;
+                    }
+                }
+                //获取用户帐号
+                var user = {'loginName':$("#loginName").val(),'loginPsd':$("#loginPsd").val()};
+                arr.push(user);
+                localStorage.user=JSON.stringify(arr);
+                localStorage.setItem('log',$('#loginName').val())
+                clear();
+            }
+            var user = {'loginName':$("#loginName").val(),'loginPsd':$("#loginPsd").val()};
+            arr.push(user);
+            localStorage.user=JSON.stringify(arr);
+
+            alert('注册成功');
+            window.location.replace('../登录页.html');
+            clear();
+        }
+    }
+    function clear(){
+        $('#loginName').val('');
+        $("#loginPsd").val('');
+    }
+    function NoKong(){
+        if($('#loginName').val()==""){
+            alert('用户名不能为空');
+            return false;
+        }else if($('#loginPsd').val()==""){
+            alert('密码不能为空');
+            return false;
+        }
+        return true;
+    }
+    $("#loginPsd").blur(function(){
+        var str = $("#loginPsd").val();
+        var ret =/[a-zA-Z0-9]{5,20}$/;
+        if(ret.test(str)){
+            $('#psd').html('<div style="color: green">'+"密码正确"+'</div>');
+        }else{
+            $('#psd').html('<p style="color: orangered">'+"密码错误"+'</p>');
+        }
+    });
+    $("#loginName").blur(function(){
+        var str = $("#loginName").val();
+        var ret = /[a-zA-Z0-9_]{5,20}$/;
+        if(ret.test(str)){
+            $('#use').html('<div style="color: green">'+"帐号正确"+'</div>');
+        }else{
+            $('#use').html('<p style="color: orangered">'+"帐号错误"+'</p>');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang='zh-cn'>
+<head>
+	<meta charset="utf-8"> 
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"> 
+	<meta content="yes" name="apple-mobile-web-app-capable"> 
+	<meta content="telephone=no" name="format-detection">
+	<style>
+		#chooseCity{
+			width: 200px;
+			height: 36px;
+			/*line-height: 36px;*/
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			outline: none;
+			padding: 0 10px;
+		}
+		
+		#informationBtn{
+			width: 220px;
+			height: 36px;
+			line-height: 36px;
+			border: 0;
+			color: #ffffff;
+			text-align: center;
+			background: deepskyblue;
+			border-radius: 3px;
+			cursor: pointer;
+			margin-top: 50px;	
+		}
+		.choose-screening-input{
+			position: relative;
+		}
+		.auto-screening{
+			position: absolute;
+			z-index: 9;
+			overflow: hidden;
+			border: 1px solid #cccccc;
+			border-bottom: 0;
+			border-top: 0;
+		}
+		.auto-screening-prompt{
+			width: 200px;
+			height: 30px;
+			line-height: 30px;
+			border-bottom: 1px solid #cccccc;
+			background: #ffffff;
+			padding: 0 10px;
+		}
+		.auto-screening-prompt:hover{
+			background: #cccccc;
+		}
+	</style>
+	</head>
+
+	<body>
+
+		<div class="choose-screening">
+			<form action="" method="post">
+				<div class="choose-screening-input">
+					<input name="searchCity" type="text" id="chooseCity" placeholder="输入城市查询">
+					<div class="auto-screening auto-hidden" id="autoScreening">
+					</div>
+				</div>				
+				<div class="mar0-20">
+					<button id="informationBtn" type="button" class="mui-btn mui-btn-block mui-btn-primary improve-information-btn">确认</button>
+				</div>
+			</form>
+		</div>
+
+
+		<script src="js/jquery.js"></script>
+		<script>
+			$("#chooseCity").bind('input',function(){
+				/*这个是全部数据的数组*/
+				var arr = ['小米1','小米2','小米3','小米4','小米5','小米14','去哪啊', 47, 7, 63, 8, 6, 9, 1,37,37,35,34,36,3,38,53,62,63,53,43,23,32,13,03];
+				/*这个数组我是防止出现重复的数据进行数据去重复后的新数组*/
+				var arrNew = [];
+
+				for(var i=0;i<arr.length;i++){
+					var arrItems=arr[i];
+				　　  /*判断元素是否存在于arrNew中，如果不存在则插入到arrNew的最后*/
+				　　  if($.inArray(arrItems,arrNew)==-1) {
+				　　　　    arrNew.push(arrItems);
+						/*console.log(arrNew);*/													
+					}
+				}
+				/*这是将input中输入的数据有关联的全部加入新生成的div中显示出来*/
+				for(i=0;i<arrNew.length;i++){
+					var arrWord = arrNew[i].toString();
+					/*console.log(arrWord);*/
+					if(((arrWord.indexOf($('#chooseCity').val())) > -1) && ($('#chooseCity').val().length > 0)){
+						var addArrWord = "<div class=auto-screening-prompt>" + arrWord + "</div>";
+   						$("#autoScreening").append(addArrWord);
+   						$("#autoScreening").removeClass("auto-hidden");
+					}
+				}
+				/*将显示出来的div的内容去重复，input内容变动时去重复*/
+				$(".auto-screening-prompt").each(function(){
+					if($(this).text().indexOf($('#chooseCity').val()) < 0){
+						$(this).remove();
+					}
+					else if($('#chooseCity').val().length == 0){
+						$("#autoScreening").addClass("auto-hidden");
+						$(".auto-screening-prompt").remove();
+					}
+				});	
+				/*弹出的提示div去重复*/
+				$(".auto-screening-prompt").each(function(i, iText){
+		            var iTextHtml = iText.innerHTML;
+		            $(".auto-screening-prompt").each(function(j, jText){
+		                var jTextHtml = jText.innerHTML;
+		                if (i < j && iTextHtml == jTextHtml) {
+		                    $(this).remove();
+		                }
+		            });
+		        });    
+				/*点击div获取文本传值*/
+				$(".auto-screening-prompt").on("click",function(){
+					$("#chooseCity").val($(this).text());
+					$("#autoScreening").addClass("auto-hidden");
+					$(".auto-screening-prompt").remove();
+				})				
+			})
+		</script>
+		<script>
+			/*确认搜索按钮的ajax提交*/
+			$("#informationBtn").on("click",function(){		
+				$.ajax({
+				    type: 'post',
+				    url: '',
+				    dataType:'json',
+				    data: $("form").serialize(),
+				    success: function(data) {
+				        if(data.code == 1){
+							
+						}else{
+							return false;
+						}
+				    }
+				});
+				
+			});     
+		</script>
+	</body>
+
+</html>

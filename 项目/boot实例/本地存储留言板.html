@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+
+        function fabiao() {
+            var $trCon=$('#trCon').val();
+            $('#dCon').append("<div>"+$trCon+"</div>");
+            localStorage.setItem('k_con',$('#dCon').html());
+        }
+        $(function () {
+            if(localstorage.getItem('k_con')!=null){
+                'k_con'.$('#dCon').html(localstorage.getItem("k_con"));
+            }
+
+        })
+
+        $/*('#fabiao').click(function () {
+         var $text=$('#dizhi>option:checked').text()
+         $('#dCon').html($text);
+         })*/
+    </script>
+</head>
+<body>
+
+<div><textarea id="trCon" cols="30" rows="10"></textarea> </div>
+<div><input type="button" value="发表" onclick="fabiao()"><input type="button" value="清除" id="clear-all"> </div>
+<div id="dCon"></div>
+
+</body>
+</html>

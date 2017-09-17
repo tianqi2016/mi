@@ -1,0 +1,15 @@
+.dqld_div{
+	width:100%;
+	background-color:#fff;
+}
+
+.dqld_div ul{
+	width:90%;
+}
+
+.dqld_div ul li{
+	height:35px;
+	line-height:35px;
+	border-bottom:1px solid #cccccc;
+	padding-left:10px;
+}

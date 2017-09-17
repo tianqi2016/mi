@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<table border="1" cellpadding="0" cellspacing="0">
+    <tr>
+        <th><label><input type='checkbox'/>全选</label></th>
+        <th>商品信息</th>
+        <th>单价</th>
+        <th>数量</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type='checkbox'/></td>
+        <td>电脑</td>
+        <td>5000</td>
+        <td><input type='text' value='1'></td>
+        <td><a href="#">删除</a></td>
+    </tr>
+</table>
+<button>点击新增</button>
+<script>
+    $("button").click(function(){
+        // 声明变量，存储新增行，变量中全用单引号，方便拼接。（必须放在单击事件内，否则只能生成一次）
+        var newnode=$(
+                "<tr>"+
+                "<td><input type='checkbox'/></td>"+
+                "<td>电视</td>"+
+                "<td>3000</td>"+
+                "<td><input type='text' value='1'></td>"+
+                "<td><a href='#'>删除</a></td>"+
+                "</tr>"
+        );
+        // 新增节点
+        $("table").append(newnode)
+    });
+    // 使用事业委托，删除节点
+    $("table").on("click","a",function(){
+        $(this).parents('tr').remove();
+    })
+
+</script>
+</body>
+</html>

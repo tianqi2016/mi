@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="js/jquery.js"></script>
+
+    <style>
+        body,ul,ol{margin:0;padding:0;}
+        li{ list-style:none;}
+        img{ border:none; vertical-align:top; }
+        #box{width:470px;height:150px; position:relative; margin:30px auto; overflow:-hidden;}
+        ul{ width:470px; position:absolute;left:0; top:0; z-index:1;}
+        ul li{width:470px; position:absolute; top:0;}
+        ol{z-index:2; width:120px; position:absolute;right:10px; bottom:10px;}
+        ol li{ width:20px;height:20px; float:left;margin:0 2px; display:inline; background:#fff; color:#f60; line-height:20px; text-align:center;}
+        ol .active{ background:#f60; color:#fff;}
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="img/m1.jpg" alt=""/></li>
+        <li><img src="img/m2.jpg" alt=""/></li>
+        <li><img src="img/m3.jpg" alt=""/></li>
+        <li><img src="img/m4.jpg" alt=""/></li>
+        <li><img src="img/m5.jpg" alt=""/></li>
+    </ul>
+    <ol>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+
+<script>
+    var $oLi = $('ol li');
+    var $uLi = $('ul li');
+    var iNow = 0;
+    var oneWidth = $uLi.width();
+
+    $uLi.slice(1).each(function(){
+        $(this).css( 'left', oneWidth );
+    });
+    var bBtn = true;
+    $oLi.mouseover(function(){
+        if(bBtn){
+            bBtn = false;
+            $oLi.attr('class','');
+
+            $(this).attr('class','active');
+
+            var index = $(this).index();
+
+            if(iNow < index){
+                $uLi.eq(index).css('left',oneWidth);
+                $uLi.eq(iNow).animate({'left':-oneWidth});
+            }
+            else if(iNow > index){
+                $uLi.eq(index).css('left',-oneWidth);
+                $uLi.eq(iNow).animate({'left':oneWidth});
+            }
+
+            $uLi.eq(index).animate({'left':0},function(){
+                bBtn = true;
+            });
+
+            iNow = index;
+        }
+    });
+
+</script>
+</body>
+</html>

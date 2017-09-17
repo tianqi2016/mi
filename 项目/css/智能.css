@@ -1,0 +1,211 @@
+.tv li {
+  list-style: none;
+  display: inline;
+  margin-left: 18px;
+}
+
+.tv li a {
+  color: black;
+  text-decoration: none;
+}
+
+.tv li a:hover {
+  color: #f56600;
+}
+
+.purchase {
+  padding: 5px;
+  border: 1px solid #f56600;
+  background-color: #f56600;
+}
+
+.purchase a {
+  color: white;
+}
+
+.carousel-control {
+  border-radius: 50%;
+  opacity: 0;
+  background-image: none;
+}
+
+#carousel-tv img {
+  width: 100%
+}
+
+.items {
+  font-size: 24px;
+  float: left;
+  margin-right: 80px;
+  font-weight: bold;
+}
+
+#fixtop {
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+  height: 70px;
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.07);
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.bigpicture {
+  background: url('../img/tv_banner.jpg') no-repeat;
+  background-position: center;
+  position: relative;
+  height: 800px;
+}
+
+.bigtop {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+}
+
+.mount {
+  margin-top: 30px;
+}
+
+.install {
+  background: url('../img/install_bg.jpg') no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 1000px;
+  position: relative;
+}
+
+.install-content {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.install-content h4, .install-content p {
+  margin-top: 25px;
+}
+
+.mount {
+  background: url('../img/tvbg2.jpg') no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.bottom > div {
+  float: left;
+  border: 1px solid gray;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 40px;
+  opacity: 1;
+  width: 1100px;
+  text-align: center;
+  margin-left: 150px;
+}
+
+.graysection {
+  background: url('../img/gray.jpg') no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  color: white;
+  font-weight: bold;
+}
+
+.leftsection {
+  position: absolute;
+  left: 180px;
+  top: 300px;
+}
+
+.graysection h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.rightsection {
+  position: absolute;
+  right: 180px;
+  top: 255px;
+}
+#daohan li a:hover{
+  color: #FFF;
+}
+#denl li a:hover{
+  color: #FFF;
+}
+.daohang2 li a{
+  padding: 0px;
+  font-size: 18px;
+  color: black;
+}
+#four-img li img{
+  height: 35px;
+  width: 80px;
+}
+#four-img li{
+  float: right;
+  list-style: none;
+  margin: 0px 12px;
+}
+#weihe{
+  color: rgb(140,140,140);
+  font-size: 12px;
+}
+.bot-cet li{
+  margin: 0px;
+  padding: 0px;
+}
+.bot-cet li a{
+  margin: 0px;
+  padding: 0px;
+  color: rgb(140,140,140);
+}
+.bot-cet li a:hover{
+  color: orangered;
+}
+.bot-bot li{
+  margin: 0px;
+  padding: 0px;
+}
+.bot-bot li a{
+  margin: 0px;
+  padding: 0px;
+  color: #757575;
+}
+.bot-bot li a:hover{
+  color: orangered;
+}
+#hot:hover{
+  color: #FFF;
+  border: 1px red solid;
+  background-color: orangered;
+}
+#helpCent .col-lg-12{
+  padding-top:12px ;
+}
+#helpCent li{
+  list-style: none;
+  margin: 9px 0px;
+}
+#helpCent li a{
+  color: grey;
+  text-decoration: none;
+}
+#helpCent li a:hover{
+  color: orangered;
+}

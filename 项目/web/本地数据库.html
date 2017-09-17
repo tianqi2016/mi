@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery.js"></script>
+    <script type="text/javascript">
+        var db=openDatabase('myDB','1.0','textdb',1024*100);
+        function Add() {
+            db.transaction(function (fx) {
+                fx.executeSql('create table if not exists UserInfor(UserName TEXT,Pwd TEXT)',[]);
+              var username=$('#txtAUserName').val();
+                var password=$('#txtAPwd').val();
+                fx.executeSql("insert into UserInfor values(?,?)",[username,password],function () {
+                    alert("注册成功");
+                });
+            });
+        }
+        function Sel() {
+
+
+            var sql="select * from UserInfor where 1=1";
+            var username=$('#txtSUserName').val();
+            if(username!=""){
+                sql+="and UserName='"+ username +"'";
+            }
+            db.transaction(function (fx) {
+                $('#dCon').html("");
+                fx.executeSql(sql,[],function (fx, rs) {
+
+                    for (var i = 0; i < rs.rows.length; i++) {
+                        var s = "<div>" + rs.rows.item(i).UserName + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.rows.item(i).Pwd + "</div>";
+
+                        $('#dCon').append(s);
+                    }
+                });
+            });
+        }
+        function Del() {
+            db.transaction(function (fx) {
+                var username=$("#txtDUserName").val();
+                fx.executeSql("delete from UserInfor where UserName=?",[username],function () {
+                    alert("删除成功");
+                    Sel();
+                })
+
+            })
+        }
+    </script>
+</head>
+<body>
+<div><input type="text" id="txtAUserName"><input type="password" id="txtAPwd"><input type="button" value="注册" onclick="Add()"></div>
+<div><input type="text" id="txtSUserName"><input type="button" value="查询" onclick="Sel()"></div>
+<div><input type="text" id="txtDUserName"><input type="button" value="删除"></div>
+<div id="dCon"></div>
+</body>
+</html>

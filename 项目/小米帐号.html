@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/小米帐号.css">
+    <script src="js/小米帐号.js"></script>
+</head>
+<body>
+<div class="container" style="line-height: 100px">
+    <div class="row">
+        <div class="col-lg-2 col-lg-offset-1">
+            <img src="img/mi-name.png" alt="">
+        </div>
+        <div class="col-lg-2 col-lg-offset-7 quit">
+            <a href="个人中心.html">退出</a>
+        </div>
+    </div>
+</div>
+<div id="all-biao">
+    <ul id="myTab"  class="nav nav-tabs col-lg-offset-2" role="tablist" style="border: 0px">
+        <li role="presentation" class="active"><a href="#acco" aria-controls="acco" role="tab" data-toggle="tab">帐号安全</a></li>
+        <li role="presentation" style="border: 0px"><a href="#person" aria-controls="person" role="tab" data-toggle="tab">个人信息</a></li>
+        <li role="presentation"><a href="#bound" aria-controls="bound" role="tab" data-toggle="tab">绑定授权</a></li>
+        <li role="presentation"><a href="#mi" aria-controls="mi" role="tab" data-toggle="tab">小米服务</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content six-pane" >
+        <div role="tabpanel" class="tab-pane active " id="acco"><img src="img/sanjiao.png" alt="" style="position: absolute;margin-top: -12px;margin-left: 48px">
+            <div class="row" style="margin-top: 10px;padding-top:30px;padding-left:30px  ">
+                <div class="col-lg-2">
+                    <h4>安全等级</h4>
+                    <span style="color: rgb(255,0,0);font-size: 20px;font-weight: bold;">40</span>  <span style="color: grey">分</span>
+                </div>
+                <div class="col-lg-5"style="margin-top: 25px" >
+                    <div class="progress" style="height: 4px">
+                        <div class="progress-bar "  style="width: 40%;background: rgb(255,0,0) ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="margin-top: 10px">
+                    <span style="color: grey">存在</span>    <span id="two-feng">2</span> <span style="color: grey">项风险</span>
+                </div>
+            </div>
+            <fieldset>
+                <legend style="width: 900px;margin-left: 30px"></legend>
+            </fieldset>
+            <div class="row" >
+                <div class="col-lg-4">
+                    <img src="img/lock.png" alt="" style="margin-left: 25px;margin-top:20px">
+                    <div style="position:absolute;margin-left:70px;margin-top: -35px  ">
+                        <p id="pas-name">帐号密码</p>
+                        <p style="font-size: 14px;margin-top: -10px;color: #9d9d9d;line-height: 1.5">用于保护帐号信息和登录安全</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="z-index:10 ">
+                    <a class="btn-default" id="xiugai" href="#">修改</a>
+                </div>
+
+            </div>
+            <fieldset>
+                <legend style="width: 900px;margin-left: 30px;margin-top: 20px;position: absolute"></legend>
+            </fieldset>
+            <div class="row" style="margin-top: 35px">
+                <div class="col-lg-4">
+                    <img src="img/emaill.png" alt="" style="margin-left: 25px;margin-top:22px">
+                    <div style="position:absolute;margin-left:70px;margin-top: -33px  ">
+                        <p id="pas-name1">帐号密码</p>
+                        <p style="font-size: 14px;margin-top: -10px;color: #9d9d9d;line-height: 1.5">用于保护帐号信息和登录安全</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="z-index:10 ">
+                    <a class="btn-default" id="xiugai1" href="#">修改</a>
+                </div>
+            </div>
+            <fieldset>
+                <legend style="width: 900px;margin-left: 30px;margin-top: 20px;position: absolute"></legend>
+            </fieldset>
+            <div class="row" style="margin-top: 35px">
+                <div class="col-lg-4">
+                    <img src="img/phone-mi.png" alt="" style="margin-left: 25px;margin-top:20px">
+                    <div style="position:absolute;margin-left:70px;margin-top: -35px  ">
+                        <p id="pas-name2">帐号密码</p>
+                        <p style="font-size: 14px;margin-top: -10px;color: #9d9d9d;line-height: 1.5">用于保护帐号信息和登录安全</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="z-index:10 ">
+                    <a class="btn-default" id="xiugai2" href="#">修改</a>
+                </div>
+            </div>
+            <fieldset>
+                <legend style="width: 900px;margin-left: 30px;margin-top: 20px;position: absolute"></legend>
+            </fieldset>
+            <div class="row" style="margin-top: 35px">
+                <div class="col-lg-4">
+                    <img src="img/mibao.png" alt="" style="margin-left: 25px;margin-top:20px">
+                    <div style="position:absolute;margin-left:70px;margin-top: -35px  ">
+                        <p id="pas-name3">帐号密码</p>
+                        <p style="font-size: 14px;margin-top: -10px;color: #9d9d9d;line-height: 1.5">用于保护帐号信息和登录安全</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="z-index:10 ">
+                    <a class="btn-default" id="xiugai3" href="#">修改</a>
+                </div>
+                <div class="qquan">
+                    <img src="img/avator-bg.png" alt="">
+                </div>
+            </div>
+            <fieldset>
+                <legend style="width: 900px;margin-left: 30px;margin-top: 20px;position: absolute"></legend>
+            </fieldset>
+        </div>
+        <div role="tabpanel" class="tab-pane  fade in" id="person" style="margin-top:0px">
+                <img src="img/sanjiao.png" alt="" style="position: absolute;margin-top: -12px;margin-left: 140px">
+                <div class="qquan">
+                    <img src="img/avator-bg.png" alt="">
+                </div>
+                <div class="portrait" style="margin-top: 110px;margin-left: 150px">
+                    <img src="img/avator-bg.png" alt="" style="border-radius:90px "> <br><br>
+                    &nbsp; &nbsp;<a href="javascript:" style="text-decoration: none">设置头像</a>
+                </div>
+                <div style="height:400px;width: 600px;position: absolute;left: 340px;top: 60px;">
+                    <div class="bot-c">
+                        <h3>基础资料</h3>
+                        <a href="javascript:" class="col-lg-offset-9  " data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span>编辑</a>
+                    </div>
+                    <div class="bot-c"><p style="display: inline">姓名： </p><p style="display: inline;color: #999" id="set-name">请设置姓名</p></div>
+                    <div class="bot-c"><p style="display: inline">生日: </p><p style="display: inline" id="birthday"></p></div>
+                    <div class="bot-c"><p style="display: inline">性别: </p><p style="display: inline" id="sex"></p></div>
+                    <div class="bot-c"><h3 >高级设置</h3></div>
+                    <div class="bot-c"><p style="display: inline">银行卡: </p><a href="" style="margin-left: 476px">管理</a></div>
+                    <div class="bot-c"><p>帐号地区：中国  </p></div>
+                </div>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="bound" style="margin-top:0px">
+            <img src="img/sanjiao.png" alt="" style="position: absolute;margin-top: -12px;margin-left: 230px">
+            333
+        </div>
+        <div role="tabpanel" class="tab-pane" id="mi" style="margin-top:0px">
+            <img src="img/sanjiao.png" alt="" style="position: absolute;margin-top: -12px;margin-left: 315px">
+            <div id="jingling" style="height: 500px;width: 400px">
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div style="height: 70px;margin-top: 60px">
+    <ul id="bot-li">
+        <li ><a href="">简体</a><span style="margin-left: 10px">|</span></li>
+        <li style="padding-left: -10px"><a href="">繁体</a><span style="margin-left: 10px">|</span></li>
+        <li><a href="">English</a><span style="margin-left: 10px">|</span></li>
+        <li><a href="">常见问题</a></li>
+    </ul>
+    <br>
+    <div style="margin-left:440px;margin-top: 10px ">
+        <p>
+            <span style="font-size: 10px">小米公司版权所有-京ICP备10046444-</span>
+            <span><a href="" style="color: #333;text-decoration: none;font-size: 10px"><img src="img/wangjng.png" alt="">京公网安备11010802020134号</a></span>
+            <span style="font-size: 10px">-京ICP证110507号</span>
+        </p>
+    </div>
+</div>
+
+
+
+<!--资料编辑 弹出框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <label for="">姓名：</label>
+                    <input type="text" pattern="姓名" id="set-name-1">
+                    <br>
+                    <label for="">生日：</label>
+                    <select name="" id="year">
+                        <option >年</option>
+                    </select>
+                    <select name="" id="moth">
+                        <option >月</option>
+                    </select>
+                    <select name="" id="day">
+                        <option >日</option>
+                    </select>
+                    <br>
+                    <label for="">性别:</label>
+                    &nbsp;&nbsp; <input type="radio" name="sex" value="男" class="sex" checked="checked">  男
+                    &nbsp;&nbsp;<input type="radio" name="sex" value="女" class="sex"> 女
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btn">提交更改</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
